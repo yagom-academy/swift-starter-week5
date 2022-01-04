@@ -10,6 +10,7 @@
 		34811DFB274B940F00A1E994 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34811DFA274B940F00A1E994 /* main.swift */; };
 		A19FF3FA2784396A0047C1F4 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19FF3F92784396A0047C1F4 /* Person.swift */; };
 		A19FF3FE278439CB0047C1F4 /* TalentedPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19FF3FD278439CB0047C1F4 /* TalentedPerson.swift */; };
+		A19FF40027843A560047C1F4 /* AuditionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19FF3FF27843A560047C1F4 /* AuditionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		34811DFA274B940F00A1E994 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A19FF3F92784396A0047C1F4 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		A19FF3FD278439CB0047C1F4 /* TalentedPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentedPerson.swift; sourceTree = "<group>"; };
+		A19FF3FF27843A560047C1F4 /* AuditionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				34811DFA274B940F00A1E994 /* main.swift */,
 				A19FF3F92784396A0047C1F4 /* Person.swift */,
 				A19FF3FD278439CB0047C1F4 /* TalentedPerson.swift */,
+				A19FF3FF27843A560047C1F4 /* AuditionManager.swift */,
 			);
 			path = CodeStarterCamp_Week5;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A19FF40027843A560047C1F4 /* AuditionManager.swift in Sources */,
 				A19FF3FA2784396A0047C1F4 /* Person.swift in Sources */,
 				A19FF3FE278439CB0047C1F4 /* TalentedPerson.swift in Sources */,
 				34811DFB274B940F00A1E994 /* main.swift in Sources */,
