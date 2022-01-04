@@ -39,3 +39,23 @@ class TalentedPerson: Person, Talent {
         super.init(name: name, height: height)
     }
 }
+
+class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
+    private(set) var singing: Level
+    private(set) var dancing: Level
+    private(set) var acting: Level
+    private(set) var frequancyOfCursing: Level
+    
+    init(singing: Level,
+         dancing: Level,
+         acting: Level,
+         frequancyOfCursing: Level,
+         name: String,
+         height: Int) {
+        self.singing = singing
+        self.dancing = dancing
+        self.acting = acting
+        self.frequancyOfCursing = frequancyOfCursing
+        super.init(name: name, height: height)
+    }
+}
