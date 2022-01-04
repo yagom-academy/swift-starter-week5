@@ -12,3 +12,13 @@ enum Level {
     case B
     case C
 }
+
+protocol Talent {
+    var singing: Level { get }
+    var dancing: Level { get }
+    var acting: Level { get }
+}
+
+protocol BadPersonality {
+    var frequancyOfCursing: Level { get }
+}
