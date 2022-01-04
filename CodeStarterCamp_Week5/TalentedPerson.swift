@@ -22,3 +22,20 @@ protocol Talent {
 protocol BadPersonality {
     var frequancyOfCursing: Level { get }
 }
+
+class TalentedPerson: Person, Talent {
+    private(set) var singing: Level
+    private(set) var dancing: Level
+    private(set) var acting: Level
+    
+    init(singing: Level,
+         dancing: Level,
+         acting: Level,
+         name: String,
+         height: Int) {
+        self.singing = singing
+        self.dancing = dancing
+        self.acting = acting
+        super.init(name: name, height: height)
+    }
+}
