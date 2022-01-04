@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AuditionManager {
+final class AuditionManager {
     private(set) var totalApplicantsList: [Person]
     private(set) var passedApplicantsList: [Person] = []
     
