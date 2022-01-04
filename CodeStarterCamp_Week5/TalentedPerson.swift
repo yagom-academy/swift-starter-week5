@@ -23,7 +23,7 @@ protocol BadPersonality {
     var frequancyOfCursing: Level { get }
 }
 
-class TalentedPerson: Person, Talent {
+final class TalentedPerson: Person, Talent {
     private(set) var singing: Level
     private(set) var dancing: Level
     private(set) var acting: Level
@@ -40,7 +40,7 @@ class TalentedPerson: Person, Talent {
     }
 }
 
-class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
+final class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
     private(set) var singing: Level
     private(set) var dancing: Level
     private(set) var acting: Level
