@@ -9,7 +9,7 @@ import Foundation
 
 final class AuditionManager {
     private(set) var totalApplicantsList: [Person]
-    private(set) var passedApplicantsList: [Person] = []
+    private var passedApplicantsList: [Person] = []
     
     init(totalApplicantsList: [Person]) {
         self.totalApplicantsList = totalApplicantsList
@@ -25,7 +25,7 @@ final class AuditionManager {
             guard let talent = applicant as? TalentedPerson else {
                 return
             }
-            
+
             guard talent.singing == .A else {
                 return
             }
