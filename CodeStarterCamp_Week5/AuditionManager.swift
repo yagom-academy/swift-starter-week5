@@ -25,16 +25,11 @@ final class AuditionManager {
             guard let talent = applicant as? TalentedPerson else {
                 return
             }
-
-            guard talent.singing == .A else {
-                return
-            }
             
-            guard talent.dancing == .A else {
-                return
-            }
-            
-            guard talent.acting == .A else {
+            guard talent.singing == .A,
+                  talent.dancing == .A,
+                  talent.acting == .A
+            else {
                 return
             }
             
