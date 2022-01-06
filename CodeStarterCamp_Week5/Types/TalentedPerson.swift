@@ -12,10 +12,6 @@ class TalentedPerson: Person, Talent {
     var dancing: Level = .A
     var acting: Level = .A
     
-//    override init(name: String, height: Int) {
-//        super.init(name: name, height: height)
-//    }
-    
     init(name: String, height: Int, singing: Level, dancing: Level, acting: Level) {
         super.init(name: name, height: height)
         self.singing = singing
