@@ -8,11 +8,15 @@
 import Foundation
 
 struct AuditionManager {
-    var totalApplicansList: [Person]
-    var passedApplicantsList: [Person] = []
+    private(set) var totalApplicantsList: [Person]
+    private var passedApplicantsList: [Person] = []
+    
+    init(applicantsList: [Person]) {
+        self.totalApplicantsList = applicantsList
+    }
     
     mutating func cast() {
-        for applicant in totalApplicansList {
+        for applicant in totalApplicantsList {
             if applicant is Talent && checkApplicantTalent(applicant: applicant) {
                 self.passedApplicantsList.append(applicant)
             }
