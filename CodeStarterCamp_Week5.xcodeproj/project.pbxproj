@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		34811DFB274B940F00A1E994 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34811DFA274B940F00A1E994 /* main.swift */; };
+		C69D0E31278497D100B1DEE5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69D0E30278497D100B1DEE5 /* Person.swift */; };
+		C69D0E342784980200B1DEE5 /* Talent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69D0E332784980200B1DEE5 /* Talent.swift */; };
+		C69D0E362784981A00B1DEE5 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69D0E352784981A00B1DEE5 /* Level.swift */; };
+		C69D0E38278498DF00B1DEE5 /* BadPersonality.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69D0E37278498DF00B1DEE5 /* BadPersonality.swift */; };
+		C69D0E3A2784993000B1DEE5 /* TalentedPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69D0E392784993000B1DEE5 /* TalentedPerson.swift */; };
+		C69D0E3C2784994100B1DEE5 /* TalentedPersonWithBadPersonality.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69D0E3B2784994100B1DEE5 /* TalentedPersonWithBadPersonality.swift */; };
+		C69D0E3E2784A5AE00B1DEE5 /* AuditionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69D0E3D2784A5AE00B1DEE5 /* AuditionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +32,13 @@
 /* Begin PBXFileReference section */
 		34811DF7274B940F00A1E994 /* CodeStarterCamp_Week5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CodeStarterCamp_Week5; sourceTree = BUILT_PRODUCTS_DIR; };
 		34811DFA274B940F00A1E994 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C69D0E30278497D100B1DEE5 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		C69D0E332784980200B1DEE5 /* Talent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talent.swift; sourceTree = "<group>"; };
+		C69D0E352784981A00B1DEE5 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		C69D0E37278498DF00B1DEE5 /* BadPersonality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadPersonality.swift; sourceTree = "<group>"; };
+		C69D0E392784993000B1DEE5 /* TalentedPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentedPerson.swift; sourceTree = "<group>"; };
+		C69D0E3B2784994100B1DEE5 /* TalentedPersonWithBadPersonality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentedPersonWithBadPersonality.swift; sourceTree = "<group>"; };
+		C69D0E3D2784A5AE00B1DEE5 /* AuditionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +72,31 @@
 			isa = PBXGroup;
 			children = (
 				34811DFA274B940F00A1E994 /* main.swift */,
+				C69D0E2F278497C500B1DEE5 /* Types */,
+				C69D0E32278497E400B1DEE5 /* Protocols */,
 			);
 			path = CodeStarterCamp_Week5;
+			sourceTree = "<group>";
+		};
+		C69D0E2F278497C500B1DEE5 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				C69D0E30278497D100B1DEE5 /* Person.swift */,
+				C69D0E352784981A00B1DEE5 /* Level.swift */,
+				C69D0E392784993000B1DEE5 /* TalentedPerson.swift */,
+				C69D0E3B2784994100B1DEE5 /* TalentedPersonWithBadPersonality.swift */,
+				C69D0E3D2784A5AE00B1DEE5 /* AuditionManager.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		C69D0E32278497E400B1DEE5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C69D0E332784980200B1DEE5 /* Talent.swift */,
+				C69D0E37278498DF00B1DEE5 /* BadPersonality.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +156,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C69D0E3E2784A5AE00B1DEE5 /* AuditionManager.swift in Sources */,
+				C69D0E342784980200B1DEE5 /* Talent.swift in Sources */,
+				C69D0E3A2784993000B1DEE5 /* TalentedPerson.swift in Sources */,
+				C69D0E3C2784994100B1DEE5 /* TalentedPersonWithBadPersonality.swift in Sources */,
+				C69D0E31278497D100B1DEE5 /* Person.swift in Sources */,
+				C69D0E362784981A00B1DEE5 /* Level.swift in Sources */,
+				C69D0E38278498DF00B1DEE5 /* BadPersonality.swift in Sources */,
 				34811DFB274B940F00A1E994 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
