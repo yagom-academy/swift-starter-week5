@@ -15,15 +15,17 @@ struct AuditionManager {
         self.totalApplicantsList = totalApplicantsList
     }
     
-    mutating func cast(applicant: Person) {
-        if let talentedApplicant = applicant as? Talent {
-            if let talentedApplicantWithBadPersonality = talentedApplicant as? BadPersonality {
-                if talentedApplicantWithBadPersonality.frequancyOfCursing.rawValue < Level.A.rawValue {
-                    return
+    mutating func cast() {
+        totalApplicantsList.forEach { applicant in
+            if let talentedApplicant = applicant as? Talent {
+                if let talentedApplicantWithBadPersonality = talentedApplicant as? BadPersonality {
+                    if talentedApplicantWithBadPersonality.frequancyOfCursing.rawValue < Level.A.rawValue {
+                        return
+                    }
                 }
-            }
-            if talentedApplicant.singing.rawValue == Level.A.rawValue || talentedApplicant.dancing.rawValue == Level.A.rawValue || talentedApplicant.acting.rawValue == Level.A.rawValue {
-                passedApplicantsList.append(applicant)
+                if talentedApplicant.singing.rawValue == Level.A.rawValue || talentedApplicant.dancing.rawValue == Level.A.rawValue || talentedApplicant.acting.rawValue == Level.A.rawValue {
+                    passedApplicantsList.append(applicant)
+                }
             }
         }
     }
