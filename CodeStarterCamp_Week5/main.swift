@@ -21,3 +21,8 @@ protocol Talent {
     var dancing: Level { get set }
     var acting: Level { get set }
 }
+
+protocol BadPersonality {
+    var frequancyOfCursing: Level { get set }
+}
+
