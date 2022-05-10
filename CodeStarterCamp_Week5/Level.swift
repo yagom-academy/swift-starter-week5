@@ -7,6 +7,8 @@
 
 import Foundation
 
-enum Level {
-    case A, B, C
+enum Level: Int {
+    case A = 3
+    case B = 2
+    case C = 1
 }
