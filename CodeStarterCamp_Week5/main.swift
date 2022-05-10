@@ -70,6 +70,15 @@ struct AuditionManager {
             }
         }
     }
+    
+    func announcePassedApplicants() {
+        print("---합격자 명단---")
+        for applicant in passedApplicantsList {
+            print("\(applicant.name)")
+        }
+        print("--------------")
+        print("축하합니다!!")
+    }
 }
 
 func runStep1() {
@@ -81,6 +90,7 @@ func runStep1() {
     let applicantsList = [yagom, noroo, summer, coda, odong]
     var auditionManager = AuditionManager(totalApplicantsList: applicantsList)
     auditionManager.cast()
+    auditionManager.announcePassedApplicants()
 }
 
 runStep1()
