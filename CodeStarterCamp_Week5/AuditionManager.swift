@@ -33,9 +33,7 @@ struct AuditionManager {
     func announcePassedApplicants() {
         print("---합격자 명단---")
         passedApplicantsList.forEach { passedPerson in
-            if let passedPersonName = passedPerson.name {
-                print(passedPersonName)
-            }
+            print(passedPerson.name)
         }
         print("""
               --------------
