@@ -9,3 +9,9 @@ class Person {
         self.height = height
     }
 }
+
+enum Level {
+    case A
+    case B
+    case C
+}
