@@ -15,3 +15,9 @@ enum Level {
     case B
     case C
 }
+
+protocol Talent {
+    var singing: Level { get set }
+    var dancing: Level { get set }
+    var acting: Level { get set }
+}
