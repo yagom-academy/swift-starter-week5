@@ -11,4 +11,6 @@ protocol Talent {
     var singing: Level { get set }
     var dancing: Level { get set }
     var acting: Level { get set }
+    
+    func isPass() -> Bool
 }
