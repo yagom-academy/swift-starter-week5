@@ -59,18 +59,16 @@ struct AuditionManager {
     var passedApplicantsList: [Person] = []
     
     mutating func cast() {
-        for applicant in totalApplicantsList {
-            if let applicantWithTalent = applicant as? Talent,
-                   applicant is TalentedPersonWithBadPersonality == false {
+        for case let applicant in totalApplicantsList where applicant is TalentedPersonWithBadPersonality == false {
+            if let applicantWithTalent = applicant as? Talent {
                 if applicantWithTalent.singing == .A ||
                    applicantWithTalent.dancing == .A ||
                    applicantWithTalent.acting == .A {
-                    self.passedApplicantsList.append(applicant)
+                   self.passedApplicantsList.append(applicant)
                 }
             }
         }
     }
-    
     func announcePassedApplicants() {
         print("---합격자 명단---")
         for applicant in passedApplicantsList {
