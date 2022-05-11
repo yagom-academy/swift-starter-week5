@@ -11,18 +11,24 @@ class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
     var singing: Level
     var dancing: Level
     var acting: Level
-    var frequencyOfCursing: Level
+    var frequancyOfCursing: Level
     
     init(name: String,
          height: Int,
          singing: Level,
          dancing: Level,
          acting: Level,
-         frequencyOfCursing: Level) {
+         frequancyOfCursing: Level) {
         self.singing = singing
         self.dancing = dancing
         self.acting = acting
-        self.frequencyOfCursing = frequencyOfCursing
+        self.frequancyOfCursing = frequancyOfCursing
         super.init(name: name, height: height)
+    }
+    
+    func isPass() -> Bool {
+        return (self.singing.isUpperThanALevel ||
+                self.dancing.isUpperThanALevel ||
+                self.acting.isUpperThanALevel) && frequancyOfCursing.isUpperThanALevel
     }
 }
