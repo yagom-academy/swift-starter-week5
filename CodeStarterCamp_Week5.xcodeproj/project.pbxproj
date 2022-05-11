@@ -12,6 +12,7 @@
 		7B79E629282BF7E10071A736 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B79E628282BF7E10071A736 /* Level.swift */; };
 		7B79E62B282BF8280071A736 /* Talent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B79E62A282BF8280071A736 /* Talent.swift */; };
 		7B79E62F282BFC650071A736 /* BadPersonality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B79E62E282BFC650071A736 /* BadPersonality.swift */; };
+		7B79E631282BFCD90071A736 /* TalentedPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B79E630282BFCD90071A736 /* TalentedPerson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		7B79E628282BF7E10071A736 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		7B79E62A282BF8280071A736 /* Talent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talent.swift; sourceTree = "<group>"; };
 		7B79E62E282BFC650071A736 /* BadPersonality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadPersonality.swift; sourceTree = "<group>"; };
+		7B79E630282BFCD90071A736 /* TalentedPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentedPerson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				7B79E628282BF7E10071A736 /* Level.swift */,
 				7B79E62A282BF8280071A736 /* Talent.swift */,
 				7B79E62E282BFC650071A736 /* BadPersonality.swift */,
+				7B79E630282BFCD90071A736 /* TalentedPerson.swift */,
 			);
 			path = CodeStarterCamp_Week5;
 			sourceTree = "<group>";
@@ -132,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B79E629282BF7E10071A736 /* Level.swift in Sources */,
+				7B79E631282BFCD90071A736 /* TalentedPerson.swift in Sources */,
 				7B79E627282BF79E0071A736 /* Person.swift in Sources */,
 				34811DFB274B940F00A1E994 /* main.swift in Sources */,
 				7B79E62F282BFC650071A736 /* BadPersonality.swift in Sources */,
