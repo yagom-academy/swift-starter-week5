@@ -7,4 +7,6 @@
 
 import Foundation
 
-
+protocol BadPersonality {
+    var frequencyOfCursing: Level { get set }
+}
