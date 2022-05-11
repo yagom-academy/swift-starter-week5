@@ -22,9 +22,9 @@ class TalentedPerson: Person, Talent {
     }
     
     func isPass() -> Bool {
-        return (self.singing.isPassedSkill ||
-                self.dancing.isPassedSkill ||
-                self.acting.isPassedSkill)
+        return (self.singing.isUpperThanALevel ||
+                self.dancing.isUpperThanALevel ||
+                self.acting.isUpperThanALevel)
     }
 }
 
