@@ -11,4 +11,13 @@ enum Level {
     case A
     case B
     case C
+    
+    var isPassedSkill: Bool {
+        switch self {
+        case .A:
+            return true
+        case .B, .C:
+            return false
+        }
+    }
 }

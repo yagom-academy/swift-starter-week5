@@ -20,5 +20,11 @@ class TalentedPerson: Person, Talent {
         self.acting = acting
         super.init(name: name, height: height)
     }
+    
+    func isPass() -> Bool {
+        return (self.singing.isPassedSkill ||
+                self.dancing.isPassedSkill ||
+                self.acting.isPassedSkill)
+    }
 }
 
