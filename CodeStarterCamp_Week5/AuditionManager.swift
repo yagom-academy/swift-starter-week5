@@ -25,7 +25,7 @@ struct AuditionManager {
             
             if let talentedApplicant = applicant as? Talent {
                 if isPassLevelTest(talentedApplicant) {
-                    passedApplicantsList.append(applicant)
+                    self.passedApplicantsList.append(applicant)
                 }
             }
         }
@@ -40,7 +40,7 @@ struct AuditionManager {
     }
     
     private func isPassLevelTest(_ talentedApplicant: Talent) -> Bool {
-        if talentedApplicant.singing.rawValue == Level.A.rawValue || talentedApplicant.dancing.rawValue == Level.A.rawValue || talentedApplicant.acting.rawValue == Level.A.rawValue {
+        if talentedApplicant.singing == Level.A || talentedApplicant.dancing == Level.A || talentedApplicant.acting == Level.A {
             return true
         } else {
             return false
@@ -49,9 +49,7 @@ struct AuditionManager {
     
     func announcePassedApplicants() {
         print("---합격자 명단---")
-        passedApplicantsList.forEach { passedPerson in
-            print(passedPerson.name)
-        }
+        self.passedApplicantsList.forEach { print($0.name) }
         print("""
               --------------
               축하합니다!!
