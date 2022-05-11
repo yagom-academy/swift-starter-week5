@@ -8,8 +8,8 @@
 import Foundation
 
 struct AuditionManager {
-    let totalApplicantsList: [Person]
-    var passedApplicantsList: [Person] = []
+    private(set) var totalApplicantsList: [Person]
+    private var passedApplicantsList: [Person] = []
     
     init(totalApplicantsList: [Person]) {
         self.totalApplicantsList = totalApplicantsList
