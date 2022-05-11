@@ -16,7 +16,7 @@ struct AuditionManager {
     }
     
     mutating func cast() {
-        totalApplicantsList.forEach { applicant in
+        for applicant in totalApplicantsList where applicant is Talent {
             if let talentedApplicant = applicant as? Talent {
                 if let talentedApplicantWithBadPersonality = talentedApplicant as? BadPersonality {
                     if talentedApplicantWithBadPersonality.frequancyOfCursing.rawValue < Level.A.rawValue {
