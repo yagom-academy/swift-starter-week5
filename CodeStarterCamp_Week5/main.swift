@@ -20,7 +20,7 @@ var auditionManager = AuditionManager(totalApplicantsList: [yagom, noroo, summer
 auditionManager.cast()
 auditionManager.announcePassedApplicants()
 
-let mySon = Person(name: "nalgangdo", height: 10000)
+//let mySon = Person(name: "nalgangdo", height: 10000)
 
 //struct Hacker {
 //    func hackPassedApplicantsList() {
@@ -30,4 +30,4 @@ let mySon = Person(name: "nalgangdo", height: 10000)
 //
 //let hacker = Hacker()
 //hacker.hackPassedApplicantsList()
-auditionManager.announcePassedApplicants()
+//auditionManager.announcePassedApplicants()
