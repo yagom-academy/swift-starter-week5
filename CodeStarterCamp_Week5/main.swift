@@ -1,6 +1,6 @@
 import Foundation
 
-class Person {
+fileprivate class Person {
     let name: String
     private let height: Int
     
@@ -10,23 +10,23 @@ class Person {
     }
 }
 
-enum Level {
+fileprivate enum Level {
     case A
     case B
     case C
 }
 
-protocol Talent {
+fileprivate protocol Talent {
     var singing: Level { get set }
     var dancing: Level { get set }
     var acting: Level { get set }
 }
 
-protocol BadPersonality {
+fileprivate protocol BadPersonality {
     var frequancyOfCursing: Level { get set }
 }
 
-class TalentedPerson: Person, Talent {
+fileprivate class TalentedPerson: Person, Talent {
     var singing: Level
     var dancing: Level
     var acting: Level
@@ -39,7 +39,7 @@ class TalentedPerson: Person, Talent {
     }
 }
 
-class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
+fileprivate class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
     var singing: Level
     var dancing: Level
     var acting: Level
@@ -54,7 +54,7 @@ class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
     }
 }
 
-struct AuditionManager {
+fileprivate struct AuditionManager {
     let totalApplicantsList: [Person]
     private var passedApplicantsList: [Person]
     
@@ -84,23 +84,23 @@ struct AuditionManager {
     }
 }
 
-struct Hacker {
+fileprivate struct Hacker {
     func hackPassedApplicantsList() {
         //auditionManager.passedApplicantsList.append(mySon)
     }
 }
 
-let yagom = TalentedPerson(name: "yagom", height: 100, singing: .B, dancing: .A, acting: .C)
-let noroo = Person(name: "noroo", height: 1000)
-let summer = TalentedPerson(name: "summer", height: 900, singing: .B, dancing: .B, acting: .B)
-let coda = TalentedPerson(name: "coda", height: 200, singing: .A, dancing: .C, acting: .C)
-let odong = TalentedPersonWithBadPersonality(name: "odong", height: 400, singing: .A, dancing: .A, acting: .A, frequancyOfCursing: .A)
-let applicantsList = [yagom, noroo, summer, coda, odong]
-var auditionManager = AuditionManager(totalApplicantsList: applicantsList)
-let mySon = Person(name: "nalgangdo", height: 10000)
-let hacker = Hacker()
+fileprivate let yagom = TalentedPerson(name: "yagom", height: 100, singing: .B, dancing: .A, acting: .C)
+fileprivate let noroo = Person(name: "noroo", height: 1000)
+fileprivate let summer = TalentedPerson(name: "summer", height: 900, singing: .B, dancing: .B, acting: .B)
+fileprivate let coda = TalentedPerson(name: "coda", height: 200, singing: .A, dancing: .C, acting: .C)
+fileprivate let odong = TalentedPersonWithBadPersonality(name: "odong", height: 400, singing: .A, dancing: .A, acting: .A, frequancyOfCursing: .A)
+fileprivate let applicantsList = [yagom, noroo, summer, coda, odong]
+fileprivate var auditionManager = AuditionManager(totalApplicantsList: applicantsList)
+fileprivate let mySon = Person(name: "nalgangdo", height: 10000)
+fileprivate let hacker = Hacker()
 
-func run() {
+fileprivate func run() {
     auditionManager.cast()
     auditionManager.announcePassedApplicants()
 }
