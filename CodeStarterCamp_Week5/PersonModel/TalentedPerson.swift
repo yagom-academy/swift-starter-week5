@@ -7,7 +7,7 @@
 
 import Foundation
 
-class TalentedPerson: Person {
+final class TalentedPerson: Person {
     let singing: Level
     let dancing: Level
     let acting: Level
