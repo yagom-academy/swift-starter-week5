@@ -18,7 +18,7 @@ struct AuditionManager {
                 return applicant
             }
             
-            guard let applicantWitTalent = (applicant as? TalentedPerson), applicantWitTalent.isPass() else {
+            guard let applicantWithTalent = (applicant as? TalentedPerson), applicantWithTalent.isPass() else {
                 return nil
             }
             return applicant
