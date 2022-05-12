@@ -2,7 +2,7 @@ import Foundation
 
 class Person {
     let name: String
-    let height: Int
+    private let height: Int
     
     init(name: String, height: Int) {
         self.name = name
@@ -102,7 +102,6 @@ let hacker = Hacker()
 
 func run() {
     auditionManager.cast()
-    hacker.hackPassedApplicantsList()
     auditionManager.announcePassedApplicants()
 }
 
