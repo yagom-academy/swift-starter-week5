@@ -9,9 +9,7 @@ import Foundation
 
 class TalentedPerson: Person, Talent {
     var singing: Level
-    
-    var dancing: Level
-    
+    var dancing: Level    
     var acting: Level
     
     init(name: String, height: Int, singing: Level, dancing: Level, acting: Level) {
@@ -22,9 +20,9 @@ class TalentedPerson: Person, Talent {
     }
     
     func isPass() -> Bool {
-        return (self.singing.isUpperThanALevel ||
+        return self.singing.isUpperThanALevel ||
                 self.dancing.isUpperThanALevel ||
-                self.acting.isUpperThanALevel)
+                self.acting.isUpperThanALevel
     }
 }
 
