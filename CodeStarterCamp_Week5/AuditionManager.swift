@@ -40,7 +40,9 @@ struct AuditionManager {
     }
     
     private func isPassLevelTest(_ talentedApplicant: Talent) -> Bool {
-        if talentedApplicant.singing == Level.A || talentedApplicant.dancing == Level.A || talentedApplicant.acting == Level.A {
+        if talentedApplicant.singing == Level.A ||
+            talentedApplicant.dancing == Level.A ||
+            talentedApplicant.acting == Level.A {
             return true
         } else {
             return false
