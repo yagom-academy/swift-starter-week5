@@ -13,6 +13,8 @@
 		ACEA85B0282A4B6E003B2F24 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA85AF282A4B6E003B2F24 /* Level.swift */; };
 		ACEA85B2282A4B7B003B2F24 /* BadPersonality.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA85B1282A4B7B003B2F24 /* BadPersonality.swift */; };
 		ACEA85B4282A4B82003B2F24 /* AuditionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA85B3282A4B82003B2F24 /* AuditionManager.swift */; };
+		ACEA85B7282D05B1003B2F24 /* TalentedPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA85B6282D05B1003B2F24 /* TalentedPerson.swift */; };
+		ACEA85B9282D08B6003B2F24 /* TalentedPersonWithBadPersonality.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA85B8282D08B6003B2F24 /* TalentedPersonWithBadPersonality.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +37,8 @@
 		ACEA85AF282A4B6E003B2F24 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		ACEA85B1282A4B7B003B2F24 /* BadPersonality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadPersonality.swift; sourceTree = "<group>"; };
 		ACEA85B3282A4B82003B2F24 /* AuditionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditionManager.swift; sourceTree = "<group>"; };
+		ACEA85B6282D05B1003B2F24 /* TalentedPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentedPerson.swift; sourceTree = "<group>"; };
+		ACEA85B8282D08B6003B2F24 /* TalentedPersonWithBadPersonality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentedPersonWithBadPersonality.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +71,7 @@
 		34811DF9274B940F00A1E994 /* CodeStarterCamp_Week5 */ = {
 			isa = PBXGroup;
 			children = (
-				ACEA85AB282A4B5F003B2F24 /* Person.swift */,
+				ACEA85B5282D0594003B2F24 /* PersonModel */,
 				ACEA85AF282A4B6E003B2F24 /* Level.swift */,
 				ACEA85AD282A4B67003B2F24 /* Talent.swift */,
 				ACEA85B1282A4B7B003B2F24 /* BadPersonality.swift */,
@@ -75,6 +79,16 @@
 				34811DFA274B940F00A1E994 /* main.swift */,
 			);
 			path = CodeStarterCamp_Week5;
+			sourceTree = "<group>";
+		};
+		ACEA85B5282D0594003B2F24 /* PersonModel */ = {
+			isa = PBXGroup;
+			children = (
+				ACEA85AB282A4B5F003B2F24 /* Person.swift */,
+				ACEA85B6282D05B1003B2F24 /* TalentedPerson.swift */,
+				ACEA85B8282D08B6003B2F24 /* TalentedPersonWithBadPersonality.swift */,
+			);
+			path = PersonModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +153,8 @@
 				ACEA85AC282A4B5F003B2F24 /* Person.swift in Sources */,
 				ACEA85B0282A4B6E003B2F24 /* Level.swift in Sources */,
 				ACEA85B2282A4B7B003B2F24 /* BadPersonality.swift in Sources */,
+				ACEA85B9282D08B6003B2F24 /* TalentedPersonWithBadPersonality.swift in Sources */,
+				ACEA85B7282D05B1003B2F24 /* TalentedPerson.swift in Sources */,
 				34811DFB274B940F00A1E994 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
