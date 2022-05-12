@@ -15,6 +15,15 @@ struct AuditionManager {
         self.totalApplicantsList = totalApplicantsList
     }
     
+    func announcePassedApplicants() {
+        print("---합격자 명단---")
+        self.passedApplicantsList.forEach { print($0.name) }
+        print("""
+              --------------
+              축하합니다!!
+              """)
+    }
+    
     mutating func cast() {
         for applicant in totalApplicantsList where applicant is Talent {
             if let talentedApplicantWithBadPersonality = applicant as? BadPersonality {
@@ -47,14 +56,5 @@ struct AuditionManager {
         } else {
             return false
         }
-    }
-    
-    func announcePassedApplicants() {
-        print("---합격자 명단---")
-        self.passedApplicantsList.forEach { print($0.name) }
-        print("""
-              --------------
-              축하합니다!!
-              """)
     }
 }
