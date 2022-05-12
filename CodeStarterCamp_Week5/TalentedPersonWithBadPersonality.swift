@@ -27,8 +27,8 @@ class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
     }
     
     func isPass() -> Bool {
-        return (self.singing.isUpperThanALevel ||
-                self.dancing.isUpperThanALevel ||
-                self.acting.isUpperThanALevel) && frequancyOfCursing.isUpperThanALevel
+        return (singing.isUpperThanALevel ||
+                dancing.isUpperThanALevel ||
+                acting.isUpperThanALevel) && frequancyOfCursing.isUpperThanALevel
     }
 }
