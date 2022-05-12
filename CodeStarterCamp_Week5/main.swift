@@ -56,9 +56,9 @@ class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
 
 struct AuditionManager {
     let totalApplicantsList: [Person]
-    private var passedApplicantsList: [Person] = []
+    private var passedApplicantsList: [Person]
     
-    internal init(totalApplicantsList: [Person]) {
+    init(totalApplicantsList: [Person]) {
         self.totalApplicantsList = totalApplicantsList
         self.passedApplicantsList = []
     }
