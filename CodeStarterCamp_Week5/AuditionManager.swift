@@ -11,8 +11,8 @@ struct AuditionManager {
     private(set) var totalApplicantsList: [Person]
     private var passedApplicantsList: [Person] = []
     
-    init(applicantList: [Person]) {
-        self.totalApplicantsList = applicantList
+    init(totalApplicantsList: [Person]) {
+        self.totalApplicantsList = totalApplicantsList
     }
     
     mutating func cast() {

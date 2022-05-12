@@ -15,7 +15,7 @@ let summer = TalentedPerson(name: "summer", height: 900, singing: .B, dancing: .
 let coda = TalentedPerson(name: "coda", height: 200, singing: .A, dancing: .C, acting: .C)
 let odong = TalentedPersonWithBadPersonality(name: "odong", height: 400, singing: .A, dancing: .A, acting: .A, frequancyOfCursing: .A)
 
-var auditionManager = AuditionManager(applicantList: [yagom, noroo, summer, coda, odong])
+var auditionManager = AuditionManager(totalApplicantsList: [yagom, noroo, summer, coda, odong])
 
 auditionManager.cast()
 auditionManager.announcePassedApplicants()
