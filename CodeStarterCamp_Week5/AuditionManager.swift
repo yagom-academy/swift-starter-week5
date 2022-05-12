@@ -25,7 +25,7 @@ struct AuditionManager {
         }
     }
     
-    func printPassedApplicantsList() {
+    func announcePassedApplicants() {
         print("---합격자 명단---")
         for applicant in passedApplicantsList {
             print("\(applicant.name)")

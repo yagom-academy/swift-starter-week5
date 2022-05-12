@@ -18,5 +18,5 @@ let odong = TalentedPersonWithBadPersonality(name: "odong", height: 400, singing
 var auditionManager: AuditionManager = AuditionManager(totalApplicantsList: [yagom, noroo, summer, coda, odong])
 
 auditionManager.cast()
-auditionManager.printPassedApplicantsList()
+auditionManager.announcePassedApplicants()
 
