@@ -13,12 +13,13 @@ struct AuditionManager {
     
     mutating func cast() {
         passedApplicantsList += totalApplicantsList.compactMap { applicant in
-            if let applicantWithPersonality = (applicant as? TalentedPersonWithBadPersonality),
-               applicantWithPersonality.isPass() {
+            if let applicantWithPersonality = applicant as? TalentedPersonWithBadPersonality,
+                applicantWithPersonality.isPass() {
                 return applicant
             }
             
-            guard let applicantWithTalent = (applicant as? TalentedPerson), applicantWithTalent.isPass() else {
+            guard let applicantWithTalent = applicant as? TalentedPerson,
+                    applicantWithTalent.isPass() else {
                 return nil
             }
             return applicant
