@@ -8,8 +8,12 @@
 import Foundation
 
 struct AuditionManager {
-    let totalApplicantsList: [Person]
-    var passedApplicantsList: [Person] = []
+    private(set) var totalApplicantsList: [Person]
+    private var passedApplicantsList: [Person] = []
+    
+    init(applicantList: [Person]) {
+        self.totalApplicantsList = applicantList
+    }
     
     mutating func cast() {
         passedApplicantsList += totalApplicantsList.compactMap { applicant in
