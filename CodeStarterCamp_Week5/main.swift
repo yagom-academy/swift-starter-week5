@@ -16,7 +16,8 @@ let odong = TalentedPersonWithBadPersonality(name: "odong", height: 400, singing
 let inho = TalentedPerson(name: "inho", height: 200, singing: .A, dancing: .C, acting: .B)
 let charlie = TalentedPersonWithBadPersonality(name: "charlie", height: 175, singing: .B, dancing: .B, acting: .A, frequencyOfCursing: .B)
 let som = TalentedPerson(name: "som", height: 100, singing: .B, dancing: .A, acting: .C)
-var yagomEnt = AuditionManager(totalApplicantsList: [yagom, noroo, summer, coda, odong, inho, charlie, som])
+let applicants = [yagom, noroo, summer, coda, odong, inho, charlie, som]
+var yagomEnt = AuditionManager(totalApplicantsList: applicants)
 
 yagomEnt.cast()
 yagomEnt.announcePassedApplicants()
