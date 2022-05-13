@@ -11,8 +11,4 @@ protocol Talent {
     var singing: Level { get }
     var dancing: Level { get }
     var acting: Level { get }
-    
-    func singingTalent() -> Level
-    func dancingTalent() -> Level
-    func actingTalent() -> Level
 }

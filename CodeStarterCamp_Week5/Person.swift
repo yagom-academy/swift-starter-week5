@@ -8,16 +8,12 @@
 import Foundation
 
 class Person {
-    private let name: String
-    private let height: Int
+    let name: String
+    let height: Int
     
     init(name: String, height: Int) {
         self.name = name
         self.height = height
-    }
-    
-    func selfIntroduce() -> String {
-        return self.name
     }
 }
 
@@ -31,18 +27,6 @@ class TalentedPerson: Person, Talent {
         self.dancing = dancing
         self.acting = acting
         super.init(name: name, height: height)
-    }
-    
-    func singingTalent() -> Level {
-        return singing
-    }
-    
-    func dancingTalent() -> Level  {
-        return dancing
-    }
-    
-    func actingTalent() -> Level  {
-        return acting
     }
 }
 
@@ -58,17 +42,5 @@ class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
         self.acting = acting
         self.frequencyOfCursing = frequencyOfCursing
         super.init(name: name, height: height)
-    }
-    
-    func singingTalent() -> Level {
-        return singing
-    }
-    
-    func dancingTalent() -> Level  {
-        return dancing
-    }
-    
-    func actingTalent() -> Level  {
-        return acting
     }
 }

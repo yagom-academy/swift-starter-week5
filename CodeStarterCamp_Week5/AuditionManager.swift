@@ -8,32 +8,16 @@
 import Foundation
 
 struct AuditionManager {
-    private(set) var totalApplicantsList: [Person]
-    private var passedApplicantsList = [Person]()
-    
-    init(totalApplicantsList: [Person]) {
-        self.totalApplicantsList = totalApplicantsList
-    }
-    
-    func isBadPersonality(_ person: Person) -> Bool {
-        return (person is TalentedPersonWithBadPersonality ? true : false)
-    }
-    
-    func isTalented(_ applicant: Talent) -> Bool {
-        if applicant.actingTalent() == .A ||
-            applicant.dancingTalent() == .A ||
-            applicant.singingTalent() == .A {
-            return true
-        } else {
-            return false
-        }
-    }
+    var totalApplicantsList: [Person]
+    var passedApplicantsList = [Person]()
     
     mutating func cast() {
         for applicant in totalApplicantsList {
-            if !isBadPersonality(applicant) {
+            if !(applicant is BadPersonality) {
                 if let talentedPersonWithGoodPersonality = applicant as? Talent {
-                    if isTalented(talentedPersonWithGoodPersonality) {
+                    if talentedPersonWithGoodPersonality.acting == .A ||
+                    talentedPersonWithGoodPersonality.dancing == .A ||
+                    talentedPersonWithGoodPersonality.singing == .A {
                         passedApplicantsList.append(applicant)
                     }
                 }
@@ -43,7 +27,7 @@ struct AuditionManager {
     }
     
     func announcePassedApplicants() {
-        let passList = passedApplicantsList.map { $0.selfIntroduce() }.joined(separator: "\n")
+        let passList = passedApplicantsList.map { $0.name }.joined(separator: "\n")
         print("""
             ---합격자 명단---
             \(passList)
