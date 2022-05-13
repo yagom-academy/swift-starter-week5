@@ -16,11 +16,7 @@ struct AuditionManager {
     }
     
     func isBadPersonality(_ person: Person) -> Bool {
-        if person is TalentedPersonWithBadPersonality {
-            return true
-        } else {
-            return false
-        }
+        return (person is TalentedPersonWithBadPersonality ? true : false)
     }
     
     func isTalented(_ applicant: Talent) -> Bool {
