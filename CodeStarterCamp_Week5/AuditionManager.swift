@@ -8,36 +8,53 @@
 import Foundation
 
 struct AuditionManager {
-    let totalApplicantsList: [Person]
-    var passedApplicantsList: [Person] = []
+    private(set) var totalApplicantsList: [Person]
+    private var passedApplicantsList: [Person] = []
     
     init(totalApplicantsList: [Person]) {
         self.totalApplicantsList = totalApplicantsList
     }
     
+    func announcePassedApplicants() {
+        print("---합격자 명단---")
+        self.passedApplicantsList.forEach { print($0.name) }
+        print("""
+              --------------
+              축하합니다!!
+              """)
+    }
+    
     mutating func cast() {
-        totalApplicantsList.forEach { applicant in
-            if let talentedApplicant = applicant as? Talent {
-                if let talentedApplicantWithBadPersonality = talentedApplicant as? BadPersonality {
-                    if talentedApplicantWithBadPersonality.frequancyOfCursing.rawValue < Level.A.rawValue {
-                        return
-                    }
+        for applicant in totalApplicantsList where applicant is Talent {
+            if let talentedApplicantWithBadPersonality = applicant as? BadPersonality {
+                if isBadPerson(talentedApplicantWithBadPersonality) {
+                    continue
                 }
-                if talentedApplicant.singing.rawValue == Level.A.rawValue || talentedApplicant.dancing.rawValue == Level.A.rawValue || talentedApplicant.acting.rawValue == Level.A.rawValue {
-                    passedApplicantsList.append(applicant)
+            }
+            
+            if let talentedApplicant = applicant as? Talent {
+                if isPassLevelTest(talentedApplicant) {
+                    self.passedApplicantsList.append(applicant)
                 }
             }
         }
     }
     
-    func announcePassedApplicants() {
-        print("---합격자 명단---")
-        passedApplicantsList.forEach { passedPerson in
-            print(passedPerson.name)
+    private func isBadPerson(_ talentedApplicantWithBadPersonality: BadPersonality) -> Bool {
+        if talentedApplicantWithBadPersonality.frequancyOfCursing.rawValue < Level.A.rawValue {
+            return true
+        } else {
+            return false
         }
-        print("""
-              --------------
-              축하합니다!!
-              """)
+    }
+    
+    private func isPassLevelTest(_ talentedApplicant: Talent) -> Bool {
+        if talentedApplicant.singing == Level.A ||
+            talentedApplicant.dancing == Level.A ||
+            talentedApplicant.acting == Level.A {
+            return true
+        } else {
+            return false
+        }
     }
 }
