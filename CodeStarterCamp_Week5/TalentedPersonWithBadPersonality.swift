@@ -8,19 +8,32 @@
 import Foundation
 
 class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
+    var singing: Level = .B
+    var dancing: Level = .B
+    var acting: Level = .B
+    var frequancyOfCursing: Level = .A
+    
+    init(name: String, height: Int, singing: Level, dancing: Level, acting: Level, frequancyOfCursing: Level) {
+        super.init(name: name, height: height)
+        self.singing = singing
+        self.dancing = dancing
+        self.acting = acting
+        self.frequancyOfCursing = frequancyOfCursing
+    }
+    
     override func walk() {
         print("악당스럽게~ 성큼 성큼🚶")
     }
     func sing() {
-        print("\(Person.name)이(가) 춤을 춥니다")
+        print("\(self.name)이(가) 춤을 춥니다")
     }
     func dance() {
-        print("\(Person.name)이(가) 노래합니다")
+        print("\(self.name)이(가) 노래합니다")
     }
     func act() {
-        print("\(Person.name)이(가) 연기를 합니다")
+        print("\(self.name)이(가) 연기를 합니다")
     }
     func curse() {
-        print("\(Person.name) 나쁜 말~ 삐...")
+        print("\(self.name) 나쁜 말~ 삐...")
     }
 }

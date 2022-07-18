@@ -9,7 +9,12 @@ import Foundation
 
 class Person {
     let name: String
-    let height: Double
+    let height: Int
+    
+    init(name: String, height: Int) {
+        self.name = name
+        self.height = height
+    }
     
     func walk() {
         print("\(self.name)이(가) 걷습니다.")
