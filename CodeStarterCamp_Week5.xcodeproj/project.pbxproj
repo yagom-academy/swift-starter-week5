@@ -12,6 +12,7 @@
 		8669461028859FC600D36145 /* TalentedPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8669460F28859FC600D36145 /* TalentedPerson.swift */; };
 		866946122885A01900D36145 /* TalentedPersonWithBadPersonality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866946112885A01900D36145 /* TalentedPersonWithBadPersonality.swift */; };
 		8669461A2885AB1B00D36145 /* step1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866946192885AB1B00D36145 /* step1.swift */; };
+		86A6CFFE2885B0A1005DFEE4 /* AuditionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A6CFFD2885B0A1005DFEE4 /* AuditionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		8669460F28859FC600D36145 /* TalentedPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentedPerson.swift; sourceTree = "<group>"; };
 		866946112885A01900D36145 /* TalentedPersonWithBadPersonality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentedPersonWithBadPersonality.swift; sourceTree = "<group>"; };
 		866946192885AB1B00D36145 /* step1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = step1.swift; sourceTree = "<group>"; };
+		86A6CFFD2885B0A1005DFEE4 /* AuditionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				8669460D28859EBF00D36145 /* Person.swift */,
 				8669460F28859FC600D36145 /* TalentedPerson.swift */,
 				866946112885A01900D36145 /* TalentedPersonWithBadPersonality.swift */,
+				86A6CFFD2885B0A1005DFEE4 /* AuditionManager.swift */,
 			);
 			path = CodeStarterCamp_Week5;
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86A6CFFE2885B0A1005DFEE4 /* AuditionManager.swift in Sources */,
 				8669460E28859EBF00D36145 /* Person.swift in Sources */,
 				8669461A2885AB1B00D36145 /* step1.swift in Sources */,
 				866946122885A01900D36145 /* TalentedPersonWithBadPersonality.swift in Sources */,
