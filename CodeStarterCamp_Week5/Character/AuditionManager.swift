@@ -14,20 +14,24 @@ struct AuditionManager {
     mutating func cast() {
         for applicant in totalApplicantsList {
             if let talentWithBadPersonality = applicant as? BadPersonality {
-                if talentWithBadPersonality.frequancyOfCursing == .A {
-                    passedApplicantsList.append(applicant)
+                guard talentWithBadPersonality.frequancyOfCursing == .A else {
+                    continue
                 }
+                self.passedApplicantsList.append(applicant)
             }
-            else if let talent = applicant as? Talent {
-                if talent.acting == .A || talent.dancing == .A || talent.singing == .A {
-                    passedApplicantsList.append(applicant)
+            else {
+                guard let talent = applicant as? TalentedPerson else {
+                    continue
                 }
+                guard talent.singing == .A || talent.dancing == .A || talent.acting == .A else {
+                    continue
+                }
+                self.passedApplicantsList.append(applicant)
             }
         }
     }
     
     mutating func announcePassedApplicants() {
-        self.cast()
         print("---합격자 명단---")
         for passedApplicant in passedApplicantsList {
             print(passedApplicant.name)
