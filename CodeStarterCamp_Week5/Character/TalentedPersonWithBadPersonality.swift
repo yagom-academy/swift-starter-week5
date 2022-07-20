@@ -24,15 +24,19 @@ class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
     override func walk() {
         print("악당스럽게~ 성큼 성큼🚶")
     }
+    
     func sing() {
         print("\(self.name)이(가) 춤을 춥니다")
     }
+    
     func dance() {
         print("\(self.name)이(가) 노래합니다")
     }
+    
     func act() {
         print("\(self.name)이(가) 연기를 합니다")
     }
+    
     func curse() {
         print("\(self.name) 나쁜 말~ 삐...")
     }
