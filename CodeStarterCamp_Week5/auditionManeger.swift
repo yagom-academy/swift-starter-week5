@@ -1,6 +1,6 @@
 import Foundation
 
-class AuditionManager {
+struct AuditionManager {
     let totalApplicantsList: [Person]
     var passedApplicantsList = [String]()
     
@@ -8,7 +8,7 @@ class AuditionManager {
         self.totalApplicantsList = totalApplicantsList
     }
     
-    func cast() {
+    mutating func cast() {
         let filter: () = ()
         for applicant in totalApplicantsList {
             if applicant is BadPersonality {
@@ -19,7 +19,7 @@ class AuditionManager {
         }
     }
     
-    func announcePassedApplicants() {
+    mutating func announcePassedApplicants() {
         self.cast()
         print("---합격자명단---")
         for applicant in passedApplicantsList {
