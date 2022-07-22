@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		34811DFB274B940F00A1E994 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34811DFA274B940F00A1E994 /* main.swift */; };
+		BF827EF8288A1098000A8F54 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF827EF7288A1098000A8F54 /* Person.swift */; };
+		BF827EFA288A10F2000A8F54 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF827EF9288A10F2000A8F54 /* Level.swift */; };
+		BF827EFC288A1121000A8F54 /* Talent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF827EFB288A1121000A8F54 /* Talent.swift */; };
+		BF827EFE288A1188000A8F54 /* BadPersonality.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF827EFD288A1188000A8F54 /* BadPersonality.swift */; };
+		BF827F00288A123A000A8F54 /* TalentedPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF827EFF288A123A000A8F54 /* TalentedPerson.swift */; };
+		BF827F02288A1376000A8F54 /* TalentedPersonWithBadPersonality.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF827F01288A1376000A8F54 /* TalentedPersonWithBadPersonality.swift */; };
+		BF827F04288A140F000A8F54 /* AuditionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF827F03288A140F000A8F54 /* AuditionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +32,13 @@
 /* Begin PBXFileReference section */
 		34811DF7274B940F00A1E994 /* CodeStarterCamp_Week5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CodeStarterCamp_Week5; sourceTree = BUILT_PRODUCTS_DIR; };
 		34811DFA274B940F00A1E994 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		BF827EF7288A1098000A8F54 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		BF827EF9288A10F2000A8F54 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		BF827EFB288A1121000A8F54 /* Talent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talent.swift; sourceTree = "<group>"; };
+		BF827EFD288A1188000A8F54 /* BadPersonality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadPersonality.swift; sourceTree = "<group>"; };
+		BF827EFF288A123A000A8F54 /* TalentedPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentedPerson.swift; sourceTree = "<group>"; };
+		BF827F01288A1376000A8F54 /* TalentedPersonWithBadPersonality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentedPersonWithBadPersonality.swift; sourceTree = "<group>"; };
+		BF827F03288A140F000A8F54 /* AuditionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +55,13 @@
 		34811DEE274B940F00A1E994 = {
 			isa = PBXGroup;
 			children = (
+				BF827F03288A140F000A8F54 /* AuditionManager.swift */,
+				BF827EF7288A1098000A8F54 /* Person.swift */,
+				BF827EFD288A1188000A8F54 /* BadPersonality.swift */,
+				BF827EFB288A1121000A8F54 /* Talent.swift */,
+				BF827EFF288A123A000A8F54 /* TalentedPerson.swift */,
+				BF827F01288A1376000A8F54 /* TalentedPersonWithBadPersonality.swift */,
+				BF827EF9288A10F2000A8F54 /* Level.swift */,
 				34811DF9274B940F00A1E994 /* CodeStarterCamp_Week5 */,
 				34811DF8274B940F00A1E994 /* Products */,
 			);
@@ -119,7 +140,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF827F04288A140F000A8F54 /* AuditionManager.swift in Sources */,
+				BF827EFA288A10F2000A8F54 /* Level.swift in Sources */,
+				BF827F00288A123A000A8F54 /* TalentedPerson.swift in Sources */,
+				BF827F02288A1376000A8F54 /* TalentedPersonWithBadPersonality.swift in Sources */,
+				BF827EF8288A1098000A8F54 /* Person.swift in Sources */,
 				34811DFB274B940F00A1E994 /* main.swift in Sources */,
+				BF827EFE288A1188000A8F54 /* BadPersonality.swift in Sources */,
+				BF827EFC288A1121000A8F54 /* Talent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
