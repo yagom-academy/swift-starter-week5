@@ -13,10 +13,10 @@ class TalentedPerson: Person, Talent {
     var acting: Level = .A
     
     init(name: String, height: Int, singing: Level, dancing: Level, acting: Level) {
-        super.init(name: name, height: height)
         self.singing = singing
         self.dancing = dancing
         self.acting = acting
+        super.init(name: name, height: height)
     }
     
     override func walk() {
