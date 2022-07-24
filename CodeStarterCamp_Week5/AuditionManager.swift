@@ -17,18 +17,31 @@ struct AuditionManager {
     
     
     mutating func cast() {
-        for applicant in totalApplicantsList {
-            if let talentedPersonWithBadPersonality = applicant as? TalentedPersonWithBadPersonality {
-                if talentedPersonWithBadPersonality.isGoodPerson() {
-                    passedApplicantsList.append(talentedPersonWithBadPersonality)
-                }
-            }
-            if let talentedPerson = applicant as? TalentedPerson {
-                if talentedPerson.isGoodPerson() {
-                    passedApplicantsList.append(talentedPerson)
-                }
+        passedApplicantsList = totalApplicantsList.compactMap() {
+            if isPassedTalentedPersonWithBadPersonality($0) ||
+                isPssedTalentedPerson($0) {
+                return $0
+            } else {
+                return nil
             }
         }
+    }
+    
+    private func isPassedTalentedPersonWithBadPersonality(_ person: Person) -> Bool {
+        guard let talentedPersonWithBadPersonality =
+                person as? TalentedPersonWithBadPersonality,
+              talentedPersonWithBadPersonality.isPassedPerson() else {
+            return false
+        }
+        return true
+    }
+    
+    private func isPssedTalentedPerson(_ person: Person) -> Bool {
+        guard let talentedPerson = person as? TalentedPerson,
+              talentedPerson.isPassedPerson() else {
+            return false
+        }
+        return true
     }
     
     func announcePassedApplicants() {
