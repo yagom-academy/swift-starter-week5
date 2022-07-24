@@ -25,6 +25,7 @@ struct AuditionManager {
                 return nil
             }
         }
+        announcePassedApplicants()
     }
     
     private func isPassedTalentedPersonWithBadPersonality(_ person: Person) -> Bool {

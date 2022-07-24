@@ -21,4 +21,3 @@ let odong = TalentedPersonWithBadPersonality(name: "odong", height: 400,
 
 var auditionManager = AuditionManager(applicansts: [yagom, noroo, summer, coda, odong])
 auditionManager.cast()
-auditionManager.announcePassedApplicants()
