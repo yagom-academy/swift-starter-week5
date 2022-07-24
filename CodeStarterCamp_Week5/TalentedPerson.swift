@@ -20,7 +20,7 @@ class TalentedPerson: Person, Talent {
         super.init(name: name, height: height)
     }
     
-    func isGoodPerson() -> Bool {
+    func isPassedPerson() -> Bool {
         if singing == .A || dancing == .A || acting == .A {
             return true
         } else {
