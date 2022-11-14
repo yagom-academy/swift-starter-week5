@@ -72,8 +72,12 @@ struct AuditionManager {
         self.passedApplicantsList.append(applicant)
     }
     
-    mutating func checkTalented(applicant: Person) {
-        if let talentedApplicant = applicant as? TalentedPerson {
+    mutating func removeFromPassedList(applicant: Person) {
+        self.passedApplicantsList.removeLast()
+    }
+    
+    mutating func checkTalent(applicant: Person) {
+        if let talentedApplicant = applicant as? Talent {
             if talentedApplicant.singing == Level.A {
                 appendPassedList(applicant: applicant)
             } else if talentedApplicant.acting == Level.A {
@@ -85,20 +89,14 @@ struct AuditionManager {
     }
     
     mutating func checkBadPersonality(applicant: Person) {
-        if let badApplicant = applicant as? TalentedPersonWithBadPersonality {
+        if let badApplicant = applicant as? BadPersonality {
             switch badApplicant.frequancyOfCursing {
             case .A:
-                break
+                self.removeFromPassedList(applicant: applicant)
             case .B:
-               break
+                self.removeFromPassedList(applicant: applicant)
             case .C:
-                if badApplicant.singing == Level.A {
-                    appendPassedList(applicant: applicant)
-                } else if badApplicant.acting == Level.A {
-                    appendPassedList(applicant: applicant)
-                } else if badApplicant.dancing == Level.A {
-                    appendPassedList(applicant: applicant)
-                }
+                break
             }
         }
     }
@@ -116,7 +114,7 @@ struct AuditionManager {
     
     mutating func cast() {
         for member in self.totalApplicantsList {
-            checkTalented(applicant: member)
+            checkTalent(applicant: member)
             checkBadPersonality(applicant: member)
             }
         
