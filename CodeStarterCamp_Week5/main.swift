@@ -83,7 +83,6 @@ struct AuditionManager {
                 continue
             }
         }
-        
     }
     
     func announcePassedApplicants() {
