@@ -61,7 +61,6 @@ class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
         self.frequancyOfCursing = frequancyOfCursing
         super.init(name: name, height: height)
     }
-    
 }
 
 struct AuditionManager {
@@ -89,15 +88,8 @@ struct AuditionManager {
     }
     
     mutating func checkBadPersonality(applicant: Person) {
-        if let badApplicant = applicant as? BadPersonality {
-            switch badApplicant.frequancyOfCursing {
-            case .A:
-                self.removeFromPassedList(applicant: applicant)
-            case .B:
-                self.removeFromPassedList(applicant: applicant)
-            case .C:
-                break
-            }
+        if (applicant is BadPersonality) == true {
+            self.removeFromPassedList(applicant: applicant)
         }
     }
     
