@@ -66,14 +66,7 @@ struct AuditionManager {
     
     mutating func cast() {
         for person in totalApplicantsList {
-            if let talentedPersonWithBadPersonality = person as? TalentedPersonWithBadPersonality {
-                if talentedPersonWithBadPersonality.frequancyOfCursing != .A &&
-                    talentedPersonWithBadPersonality.singing == .A ||
-                    talentedPersonWithBadPersonality.dancing == .A ||
-                    talentedPersonWithBadPersonality.acting == .A {
-                    passedApplicantsList.append(talentedPersonWithBadPersonality)
-                }
-            } else if let talentedPerson = person as? TalentedPerson {
+            if let talentedPerson = person as? TalentedPerson {
                 if  talentedPerson.singing == .A ||
                         talentedPerson.dancing == .A ||
                         talentedPerson.acting == .A {
@@ -84,7 +77,7 @@ struct AuditionManager {
             }
         }
     }
-    
+
     func announcePassedApplicants() {
         if passedApplicantsList.count != 0 {
             print("---합격자 명단---")
@@ -96,10 +89,6 @@ struct AuditionManager {
         } else {
             print("합격자가 없습니다.")
         }
-    }
-    
-    init(totalApplicantsList: [Person]) {
-        self.totalApplicantsList = totalApplicantsList
     }
 }
 
