@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		34811DFB274B940F00A1E994 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34811DFA274B940F00A1E994 /* main.swift */; };
+		68424484292242C30079E2E5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68424483292242C30079E2E5 /* Person.swift */; };
+		68424486292242C90079E2E5 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68424485292242C90079E2E5 /* Level.swift */; };
+		68424488292242CF0079E2E5 /* Talent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68424487292242CF0079E2E5 /* Talent.swift */; };
+		6842448A292242DF0079E2E5 /* BadPersonality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68424489292242DF0079E2E5 /* BadPersonality.swift */; };
+		6842448C292242FF0079E2E5 /* AuditionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6842448B292242FF0079E2E5 /* AuditionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,11 @@
 /* Begin PBXFileReference section */
 		34811DF7274B940F00A1E994 /* CodeStarterCamp_Week5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CodeStarterCamp_Week5; sourceTree = BUILT_PRODUCTS_DIR; };
 		34811DFA274B940F00A1E994 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		68424483292242C30079E2E5 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		68424485292242C90079E2E5 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		68424487292242CF0079E2E5 /* Talent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talent.swift; sourceTree = "<group>"; };
+		68424489292242DF0079E2E5 /* BadPersonality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadPersonality.swift; sourceTree = "<group>"; };
+		6842448B292242FF0079E2E5 /* AuditionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,11 @@
 			isa = PBXGroup;
 			children = (
 				34811DFA274B940F00A1E994 /* main.swift */,
+				68424483292242C30079E2E5 /* Person.swift */,
+				68424485292242C90079E2E5 /* Level.swift */,
+				68424487292242CF0079E2E5 /* Talent.swift */,
+				68424489292242DF0079E2E5 /* BadPersonality.swift */,
+				6842448B292242FF0079E2E5 /* AuditionManager.swift */,
 			);
 			path = CodeStarterCamp_Week5;
 			sourceTree = "<group>";
@@ -119,7 +134,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6842448C292242FF0079E2E5 /* AuditionManager.swift in Sources */,
+				68424486292242C90079E2E5 /* Level.swift in Sources */,
+				68424484292242C30079E2E5 /* Person.swift in Sources */,
 				34811DFB274B940F00A1E994 /* main.swift in Sources */,
+				6842448A292242DF0079E2E5 /* BadPersonality.swift in Sources */,
+				68424488292242CF0079E2E5 /* Talent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
