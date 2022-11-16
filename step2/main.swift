@@ -43,7 +43,6 @@ class TalentedPerson: Person, Talent {
         self.dancing = dancing
         self.acting = acting
     }
-    
 }
 
 class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
@@ -59,12 +58,22 @@ class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
         self.acting = acting
         self.frequancyOfCursing = frequancyOfCursing
     }
-    
 }
 
-struct AuditionManager {
-    var totalApplicantsList: [Person]
-    var passedApplicationsList: [Person]
+public struct AuditionManager {
+    
+    private var _totalApplications: [Person] = []
+    
+    private(set) var totalApplicantsList: [Person] {
+        get {
+            return _totalApplications
+        }
+        set {
+            print("지원자 추가는 별도 메서드를 통해서만 가능합니다.")
+        }
+    }
+    
+    private var passedApplicationsList: [Person] = []
     
     mutating func cast() -> [Person] {
         for number in 0..<totalApplicantsList.count {
@@ -75,18 +84,29 @@ struct AuditionManager {
                 }
             }
         }
-        
         return passedApplicationsList
-
     }
     
-    func annoucePassedApplicants(selectedApplicants: [Person]) {
+    func announcePassedApplicants(selectedApplicants: [Person]) {
         print("---합격자 명단---")
         for person in selectedApplicants {
             print("\(person.name)")
         }
         print("--------------")
         print("축하합니다!!🥳")
+    }
+    
+    mutating func addNewApplicants(Applicants: [Person]) {
+        for newPerson in Applicants {
+            _totalApplications.append(newPerson)
+        }
+    }
+}
+
+struct Hacker {
+    func hackPassedApplicantsList() {
+        //god.passedApplicationsList.append(mySon)
+        //더이상 직접적으로 접근하지 못함!
     }
 }
 
@@ -95,12 +115,17 @@ let wongbing = TalentedPerson(name: "wongbing", height: 300, singing: .C, dancin
 let watermellon = TalentedPerson(name: "catlover", height: 175, singing: .B, dancing: .C, acting: .A)
 let yagom = TalentedPerson(name: "yahangom", height: 1000, singing: .A, dancing: .A, acting: .A)
 let jinho = TalentedPerson(name: "kongggajima", height: 222, singing: .B, dancing: .B, acting: .B)
-
 let voldemort = TalentedPersonWithBadPersonality(name: "Tom", height: 168, singing: .A, dancing: .A, acting: .A, frequancyOfCursing: .A)
-
 let potter = Person(name: "potter", height: 175)
+///치...침입자가 나타났다!
+let mySon = Person(name: "nalgangdo", height: 10000)
 
-var god = AuditionManager(totalApplicantsList: [ harry, wongbing, watermellon, yagom, jinho, voldemort], passedApplicationsList: [])
+var god = AuditionManager()
 
-god.annoucePassedApplicants(selectedApplicants: god.cast())
+let hacker = Hacker()
+hacker.hackPassedApplicantsList()
 
+/// 후후후 이 메서드가 아니면 이제 아들을 꽂아 넣을 수가 없다!
+god.addNewApplicants(Applicants: [ mySon, harry, yagom, wongbing, watermellon, voldemort, jinho, potter ])
+god.announcePassedApplicants(selectedApplicants: god.cast())
+print(god.totalApplicantsList)
