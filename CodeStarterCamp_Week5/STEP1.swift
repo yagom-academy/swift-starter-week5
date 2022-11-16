@@ -64,8 +64,8 @@ class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
 }
 
 struct AuditionManager {
-    var totalApplicantsList: [Person]
-    var passedApplicantsList: [Person] = []
+    private(set) var totalApplicantsList: [Person] = []
+    private var passedApplicantsList: [Person] = []
     
     mutating func appendPassedList(applicant: Person) {
         self.passedApplicantsList.append(applicant)
@@ -108,8 +108,12 @@ struct AuditionManager {
         for member in self.totalApplicantsList {
             checkTalent(applicant: member)
             checkBadPersonality(applicant: member)
-            }
+        }
         
         self.announcePassedApplicants()
+    }
+    
+    init(applicants: [Person]) {
+        self.totalApplicantsList = applicants
     }
 }
