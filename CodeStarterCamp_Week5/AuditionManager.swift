@@ -8,11 +8,17 @@
 import Foundation
 
 struct AuditionManager {
-    var totalApplicantsList: [Person]
-    var passedApplicantList: [Person] = []
+    public private(set) var totalApplicantsList: [Person]
+    private var passedApplicantList: [Person] = []
+    
+    init(totalApplicantsList: [Person]) {
+        self.totalApplicantsList = totalApplicantsList
+    }
     
     mutating func cast() {
-        guard !totalApplicantsList.isEmpty else { return }
+        guard !totalApplicantsList.isEmpty else {
+            return
+        }
         let passedList = totalApplicantsList
             .filter { $0 is Talent }
             .filter { !($0 is BadPersonality) }
@@ -24,7 +30,8 @@ struct AuditionManager {
     func announcePassedApplicants() {
         guard !passedApplicantList.isEmpty else {
             print("합격자가 없습니다")
-            return }
+            return
+        }
         print("---합격자 명단---")
         passedApplicantList
             .forEach {
