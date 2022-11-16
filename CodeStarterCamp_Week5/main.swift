@@ -61,8 +61,8 @@ class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
 }
 
 struct AuditionManager {
-    var totalApplicantsList: [Person]
-    var passedApplicantsList: [Person] = []
+    public private(set) var totalApplicantsList: [Person]
+    private var passedApplicantsList: [Person] = []
     
     mutating func cast() {
         for person in totalApplicantsList {
@@ -90,6 +90,17 @@ struct AuditionManager {
             print("합격자가 없습니다.")
         }
     }
+    
+    init(totalApplicantsList: [Person]) {
+        self.totalApplicantsList = totalApplicantsList
+    }
+}
+
+struct Hacker {
+    func hackPassedApplicantsList() {
+        //에러 발생: private으로 접근이 제한되어있는 passedApplicantsList에 접근할 수 없음
+        //auditionManager.passedApplicantsList.append(mySon)
+    }
 }
 
 let yagom = TalentedPerson(name: "yagom", height: 100, singing: .B, dancing: .A, acting: .C)
@@ -101,4 +112,9 @@ let odong = TalentedPersonWithBadPersonality(name: "odong", height: 400, singing
 var auditionManager = AuditionManager(totalApplicantsList: [yagom, noroo, summer, coda, odong])
 
 auditionManager.cast()
+auditionManager.announcePassedApplicants()
+
+let mySon = Person(name: "nalgangdo", height: 10000)
+let hacker = Hacker()
+hacker.hackPassedApplicantsList()
 auditionManager.announcePassedApplicants()
