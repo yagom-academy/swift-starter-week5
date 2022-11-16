@@ -43,6 +43,7 @@ class TalentedPerson: Person, Talent {
         self.dancing = dancing
         self.acting = acting
     }
+    
 }
 
 class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
@@ -58,6 +59,7 @@ class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
         self.acting = acting
         self.frequancyOfCursing = frequancyOfCursing
     }
+    
 }
 
 struct AuditionManager {
@@ -73,7 +75,9 @@ struct AuditionManager {
                 }
             }
         }
+        
         return passedApplicationsList
+
     }
     
     func annoucePassedApplicants(selectedApplicants: [Person]) {
@@ -91,13 +95,12 @@ let wongbing = TalentedPerson(name: "wongbing", height: 300, singing: .C, dancin
 let watermellon = TalentedPerson(name: "catlover", height: 175, singing: .B, dancing: .C, acting: .A)
 let yagom = TalentedPerson(name: "yahangom", height: 1000, singing: .A, dancing: .A, acting: .A)
 let jinho = TalentedPerson(name: "kongggajima", height: 222, singing: .B, dancing: .B, acting: .B)
+
 let voldemort = TalentedPersonWithBadPersonality(name: "Tom", height: 168, singing: .A, dancing: .A, acting: .A, frequancyOfCursing: .A)
+
 let potter = Person(name: "potter", height: 175)
 
 var god = AuditionManager(totalApplicantsList: [ harry, wongbing, watermellon, yagom, jinho, voldemort], passedApplicationsList: [])
 
 god.annoucePassedApplicants(selectedApplicants: god.cast())
-
-
-
 
