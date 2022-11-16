@@ -15,5 +15,10 @@ let coda = TalentedPerson(name: "coda", height: 200, singing: .A, dancing: .B, a
 let odong = TalentedPersonWithBadPersonality(name: "odong", height: 400, singing: .A, dancing: .A, acting: .A, frequancyOfCursing: .A)
 var applicantsList: AuditionManager = AuditionManager(totalApplicantsList: [yagom, noroo, summer, coda, odong])
 
+let mySon = Person(name: "nalgangdo", height: 10000)
+let hacker = Hacker()
+
+hacker.hackPassedApplicantsList()
+
 applicantsList.cast()
 applicantsList.announcePassedApplicants()
