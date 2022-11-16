@@ -21,7 +21,7 @@ protocol Talent {
 }
 
 protocol BadPersonality{
-    var frequancyOfCursing: Level? { get set }
+    var frequancyOfCursing: Level? { get }
     
     func haveBadPersonality() -> Bool
 }
