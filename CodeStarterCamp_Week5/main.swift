@@ -18,7 +18,8 @@ let chun = TalentedPerson(name: "chun", height: 176, singing: .B, dancing: .B, a
 let ame = TalentedPersonWithBadPersonality(name: "ame", height: 155, singing: .C, dancing: .A, acting: .A, frequancyOfCursing: .B)
 let groot = TalentedPersonWithBadPersonality(name: "groot", height: 200, singing: .A, dancing: .A, acting: .C, frequancyOfCursing: .C)
 
-var auditionManager = AuditionManager(applicants: [snoopdog, rowan, wongbing, jun, chun, ame, groot])
+let applicantsArray = [snoopdog, rowan, wongbing, jun, chun, ame, groot]
+var auditionManager = AuditionManager(applicants: applicantsArray)
 auditionManager.cast()
 
 let mySon = Person(name: "nalgangdo", height: 10000)
