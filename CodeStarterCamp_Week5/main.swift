@@ -8,5 +8,7 @@ let coda = TalentedPerson(name: "coda", height: 200, singing: .A, dancing: .C, a
 let odong = TalentedPersonWithBadPersonality(name: "odong", height: 400, singing: .A, dancing: .A, acting: .A, frequancyOfCursing: .A)
 
 var auditionManager = AuditionManager(totalApplicantsList: [yagom, noroo, summer, coda, odong])
+
 auditionManager.checkTalent()
+auditionManager.checkBadPersonality()
 auditionManager.cast()

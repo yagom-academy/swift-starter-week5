@@ -6,13 +6,3 @@ protocol Talent {
     var acting: Level { get }
     
 }
-
-protocol BadPersonality {
-    var frequancyOfCursing: Level { get }
-}
-
-enum Level {
-    case A
-    case B
-    case C
-}

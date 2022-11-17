@@ -1,6 +1,7 @@
 import Foundation
 
-struct AuditionManager {
+struct AuditionManager: CheckTalent, CheckBadPersonality {
+    
     var totalApplicantsList: [Person]
     var passedApplicantsList = [Person]()
    
@@ -9,19 +10,30 @@ struct AuditionManager {
     }
     
     mutating func checkTalent() {
-        for applicant in totalApplicantsList {
-            if let talentedWithBadPersonalityApplicant = applicant as? TalentedPersonWithBadPersonality {
-                if talentedWithBadPersonalityApplicant.singing == Level.A || talentedWithBadPersonalityApplicant.acting == Level.A || talentedWithBadPersonalityApplicant.dancing == Level.A && talentedWithBadPersonalityApplicant.frequancyOfCursing == Level.A {
-                    appendPassedList(applicant: applicant)
-                }
-            }
-            if let talentedApplicant = applicant as? TalentedPerson {
-                if talentedApplicant.singing == Level.A || talentedApplicant.acting == Level.A || talentedApplicant.dancing == Level.A {
-                    appendPassedList(applicant: applicant)
+        for applicant in totalApplicantsList  {
+            
+            if applicant is Talent {
+                if let talentedApplicant = applicant as? TalentedPerson {
+                    if talentedApplicant.singing == Level.A || talentedApplicant.acting == Level.A || talentedApplicant.dancing == Level.A {
+                        appendPassedList(applicant: applicant)
+                    }
                 }
             }
         }
         
+    }
+    
+    
+    mutating func checkBadPersonality() {
+        for applicant in totalApplicantsList {
+            if applicant is BadPersonality {
+                if let talentedWithBadPersonalityApplicant = applicant as? TalentedPersonWithBadPersonality {
+                    if talentedWithBadPersonalityApplicant.singing == Level.A || talentedWithBadPersonalityApplicant.acting == Level.A || talentedWithBadPersonalityApplicant.dancing == Level.A && talentedWithBadPersonalityApplicant.frequancyOfCursing == Level.A {
+                        appendPassedList(applicant: applicant)
+                    }
+                }
+            }
+        }
     }
     
     mutating func cast() {
