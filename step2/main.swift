@@ -62,16 +62,8 @@ class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
 
 public struct AuditionManager {
     
-    private var _totalApplications: [Person] = []
-    
-    private(set) var totalApplicantsList: [Person] {
-        get {
-            return _totalApplications
-        }
-        set {
-        }
-    }
-    
+    //private var _totalApplications: [Person] = []
+    private(set) var totalApplicantsList: [Person] = []
     private var passedApplicationsList: [Person] = []
     
     mutating func cast() {
@@ -96,14 +88,15 @@ public struct AuditionManager {
     
     mutating func addNewApplicants(Applicants: [Person]) {
         for newPerson in Applicants {
-            _totalApplications.append(newPerson)
+            totalApplicantsList.append(newPerson)
         }
     }
 }
 
 struct Hacker {
     func hackPassedApplicantsList() {
-        //god.passedApplicationsList.append(mySon)
+        // god.passedApplicationsList.append(mySon)
+        // god.totalApplicantsList.append(mySon)
         //더이상 직접적으로 접근하지 못함!
     }
 }
