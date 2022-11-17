@@ -13,17 +13,15 @@ enum Level {
 }
 
 protocol Talent {
-    var singing: Level? { get }
-    var dancing: Level? { get }
-    var acting: Level? { get }
+    var singing: Level { get }
+    var dancing: Level { get }
+    var acting: Level { get }
     
     func haveAGrade() -> Bool
 }
 
-protocol BadPersonality{
-    var frequancyOfCursing: Level? { get }
-    
-    func haveBadPersonality() -> Bool
+protocol BadPersonality {
+    var frequancyOfCursing: Level { get }
 }
 
 class Person {
@@ -37,22 +35,20 @@ class Person {
 }
 
 class TalentedPerson: Person, Talent {
-    var singing: Level?
-    var dancing: Level?
-    var acting: Level?
+    var singing: Level
+    var dancing: Level
+    var acting: Level
     
     init(name: String, height: Int, singing: Level, dancing: Level, acting: Level) {
-        super.init(name: name, height: height)
-        
         self.singing = singing
         self.dancing = dancing
         self.acting = acting
+        
+        super.init(name: name, height: height)
     }
     
     func haveAGrade() -> Bool {
-        guard let siningLv = self.singing, let dancingLv = self.dancing, let actingLv = self.acting else { return false }
-        
-        if siningLv == .A || dancingLv == .A || actingLv == .A {
+        if self.singing == .A || self.dancing == .A || self.acting == .A {
             return true
         } else {
             return false
@@ -61,34 +57,22 @@ class TalentedPerson: Person, Talent {
 }
 
 class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
-    var singing: Level?
-    var dancing: Level?
-    var acting: Level?
-    var frequancyOfCursing: Level?
+    var singing: Level
+    var dancing: Level
+    var acting: Level
+    var frequancyOfCursing: Level
     
     init(name: String, height: Int, singing: Level, dancing: Level, acting: Level, frequancyOfCursing: Level) {
-        super.init(name: name, height: height)
-        
         self.singing = singing
         self.dancing = dancing
         self.acting = acting
         self.frequancyOfCursing = frequancyOfCursing
+        
+        super.init(name: name, height: height)
     }
     
     func haveAGrade() -> Bool {
-        guard let siningLv = self.singing, let dancingLv = self.dancing, let actingLv = self.acting else { return false }
-        
-        if siningLv == .A || dancingLv == .A || actingLv == .A {
-            return true
-        } else {
-            return false
-        }
-    }
-    
-    func haveBadPersonality() -> Bool {
-        guard let frequancyOfCursingLv = self.frequancyOfCursing else { return false }
-        
-        if frequancyOfCursingLv == .A {
+        if self.singing == .A || self.dancing == .A || self.acting == .A {
             return true
         } else {
             return false
@@ -98,34 +82,29 @@ class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
 
 struct AuditionManager {
     var totalApplicantsList: [Person] = []
+    var passedApplicantsList: [Person] = []
     
-    func cast() -> [Person] {
+    mutating func cast() {
         var passer: [Person] = []
         
         for applicant in self.totalApplicantsList {
             guard let talentedPerson = applicant as? Talent else { continue }
             
             if talentedPerson.haveAGrade() {
-                guard let talentedBadPerson = talentedPerson as? BadPersonality else {
+                guard talentedPerson is BadPersonality else {
                     passer.append(applicant)
                     continue
-                }
-                
-                if !talentedBadPerson.haveBadPersonality() {
-                    passer.append(applicant)
                 }
             }
         }
         
-        return passer
+        self.passedApplicantsList = passer
     }
     
     func announcePassedApplicants() {
-        let passedPerson = cast()
-        
         print("---합격자 명단---")
         
-        for person in passedPerson {
+        for person in passedApplicantsList {
             print("\(person.name)")
         }
         
@@ -142,5 +121,6 @@ let summer = TalentedPerson(name: "summer", height: 900, singing: .B, dancing: .
 let coda = TalentedPerson(name: "coda", height: 200, singing: .A, dancing: .C, acting: .C)
 let odong = TalentedPersonWithBadPersonality(name: "odong", height: 400, singing: .A, dancing: .A, acting: .A, frequancyOfCursing: .A)
 
-let JYP = AuditionManager(totalApplicantsList: [yagom, noroo, summer, coda, odong])
+var JYP = AuditionManager(totalApplicantsList: [yagom, noroo, summer, coda, odong])
+JYP.cast()
 JYP.announcePassedApplicants()
