@@ -69,13 +69,12 @@ public struct AuditionManager {
             return _totalApplications
         }
         set {
-            print("지원자 추가는 별도 메서드를 통해서만 가능합니다.")
         }
     }
     
     private var passedApplicationsList: [Person] = []
     
-    mutating func cast() -> [Person] {
+    mutating func cast() {
         for number in 0..<totalApplicantsList.count {
             if (totalApplicantsList[number] is Talent) && ((totalApplicantsList[number] is BadPersonality) == false) {
                 let talentedPerson = totalApplicantsList[number] as? TalentedPerson
@@ -84,12 +83,11 @@ public struct AuditionManager {
                 }
             }
         }
-        return passedApplicationsList
     }
     
-    func announcePassedApplicants(selectedApplicants: [Person]) {
+    func announcePassedApplicants() {
         print("---합격자 명단---")
-        for person in selectedApplicants {
+        for person in passedApplicationsList {
             print("\(person.name)")
         }
         print("--------------")
@@ -127,5 +125,6 @@ hacker.hackPassedApplicantsList()
 
 /// 후후후 이 메서드가 아니면 이제 아들을 꽂아 넣을 수가 없다!
 god.addNewApplicants(Applicants: [ mySon, harry, yagom, wongbing, watermellon, voldemort, jinho, potter ])
-god.announcePassedApplicants(selectedApplicants: god.cast())
+god.cast()
+god.announcePassedApplicants()
 print(god.totalApplicantsList)
