@@ -11,7 +11,6 @@ struct AuditionManager: CheckTalent, CheckBadPersonality {
     
     mutating func checkTalent() {
         for applicant in totalApplicantsList  {
-            
             if applicant is Talent {
                 if let talentedApplicant = applicant as? TalentedPerson {
                     if talentedApplicant.singing == Level.A || talentedApplicant.acting == Level.A || talentedApplicant.dancing == Level.A {
