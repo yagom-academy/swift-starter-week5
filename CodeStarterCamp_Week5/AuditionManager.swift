@@ -6,10 +6,14 @@ struct AuditionManager: Talent, BadPersonality {
     var acting: Level = .C
     var frequancyOfCursing: Level = .C
     
+    // 프로퍼티에 private 선언
+    private(set) var totalApplicantsList = [Person]()
+    private var passedApplicantsList = [Person]()
+    // 참가자를 넣기 위한 메서드 생성
+    mutating func appendTotalApplicantsList(applicants: [Person]) {
+        self.totalApplicantsList = applicants
+    }
     
-    var totalApplicantsList: [Person]
-    var passedApplicantsList = [Person]()
-   
     mutating func appendPassedList(applicant: Person) {
         self.passedApplicantsList.append(applicant)
     }
