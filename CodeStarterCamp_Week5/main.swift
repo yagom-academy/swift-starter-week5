@@ -14,5 +14,3 @@ auditionManager.appendTotalApplicantsList(applicants: [yagom, noroo, summer, cod
 auditionManager.checkTalent()
 auditionManager.checkBadPersonality()
 auditionManager.cast()
-
-
