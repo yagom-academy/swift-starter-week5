@@ -5,4 +5,12 @@ protocol Talent {
     var dancing: Level { get }
     var acting: Level { get }
     
+    func checkHighestLevel() -> Bool
 }
+
+extension Talent {
+    func checkHighestLevel() -> Bool {
+        return singing == .A || dancing == .A || acting == .A
+    }
+}
+

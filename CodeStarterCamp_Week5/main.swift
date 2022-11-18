@@ -12,3 +12,5 @@ var auditionManager = AuditionManager(totalApplicantsList: [yagom, noroo, summer
 auditionManager.checkTalent()
 auditionManager.checkBadPersonality()
 auditionManager.cast()
+
+
