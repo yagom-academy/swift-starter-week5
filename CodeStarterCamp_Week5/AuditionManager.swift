@@ -6,9 +6,12 @@ struct AuditionManager: Talent, BadPersonality {
     var acting: Level = .C
     var frequancyOfCursing: Level = .C
     
+    mutating func appendTotalApplicantsList(applicants: [Person]) {
+        self.totalApplicantsList = applicants
+    }
     
-    var totalApplicantsList: [Person]
-    var passedApplicantsList = [Person]()
+    private(set) var totalApplicantsList = [Person]()
+    private var passedApplicantsList = [Person]()
    
     mutating func appendPassedList(applicant: Person) {
         self.passedApplicantsList.append(applicant)
