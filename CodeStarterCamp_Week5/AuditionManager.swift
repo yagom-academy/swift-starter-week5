@@ -17,14 +17,13 @@ class AuditionManager {
     
     func cast() {
         for applicant in totalApplicantsList {
-            if let talentApplicant = applicant as? Talent {
-                if talentApplicant.singing == .A || talentApplicant.dancing == .A ||
-                    talentApplicant.acting == .A {
-                    passedApplicantsList.append(applicant)
-                }
+            guard let talentApplicant = applicant as? Talent, (talentApplicant as? BadPersonality) == nil  else {
+                return
             }
-            if applicant is BadPersonality {
-                passedApplicantsList.removeLast()
+            if talentApplicant.singing == .A ||
+                talentApplicant.dancing == .A ||
+                talentApplicant.acting == .A {
+                passedApplicantsList.append(applicant)
             }
         }
     }
