@@ -8,5 +8,14 @@
 
 import Foundation
 
-print("Hello, World!")
+
+let mint = TalentedPerson(name: "mint", height: 163, singing: .B, dancing: .C, acting: .B)
+let sara = TalentedPerson(name: "sara", height: 158, singing: .A, dancing: .C, acting: .A)
+let ohNew = TalentedPerson(name: "ohNew", height: 30, singing: .A, dancing: .A, acting: .A)
+let noma = TalentedPersonWithBadPersonality(name: "noma", height: 180, singing: .A, dancing: .A, acting: .A, frequancyOfCursing: .A)
+
+let yagom = AuditionManager(totalApplicantsList: [mint, sara, ohNew, noma])
+
+yagom.cast()
+yagom.announcePassedApplicants()
 
