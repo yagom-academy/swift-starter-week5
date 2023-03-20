@@ -9,7 +9,7 @@ import Foundation
 
 struct AuditionManager {
     var totalApplicantsList: [Person]
-    var passedApplicantsLsit = [Person]()
+    var passedApplicantsList = [Person]()
     
     mutating func cast() {
         for applicant in totalApplicantsList{
@@ -18,14 +18,14 @@ struct AuditionManager {
                    continue
                 }
                 
-                passedApplicantsLsit.append(applicant as! Person)
+                passedApplicantsList.append(applicant as! Person)
             }
         }
     }
     
     func announcePassedApplicants() {
         print("---합격자 명단---")
-        for applicant in passedApplicantsLsit {
+        for applicant in passedApplicantsList {
             print(applicant.name)
         }
         print("--------------")
