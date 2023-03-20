@@ -15,9 +15,9 @@ struct AuditionManager {
         var successfulCandidate: [Person] = []
         
         for applicant in self.totalApplicantsList {
-            guard let talentedPerson = applicant as? Talent else { continue } //업캐스팅 ?는 자식 클래스의 인스턴스로 사용할 수 있도록 하기 위함임/ continue를 사용함으로써 코드블록의 반복을 줄일 수 있다.
+            guard let talentedPerson = applicant as? Talent else { continue }
             if talentedPerson.checkedSuccessful() {
-                guard talentedPerson is BadPersonality else { //is를 붙여서 타입을 확인할 수 있다
+                guard talentedPerson is BadPersonality else { 
                     successfulCandidate.append(applicant)
                     continue
                 }
