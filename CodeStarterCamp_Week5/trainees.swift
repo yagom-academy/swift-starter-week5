@@ -18,9 +18,9 @@ protocol BadPersonality {
 }
 
 class TalentedPerson: Person, Talent {
-    var singing: Level
-    var dancing: Level
-    var acting: Level
+    let singing: Level
+    let dancing: Level
+    let acting: Level
     
     init(name: String, height: Int, singing: Level, dancing: Level, acting: Level) {
         self.singing = singing
@@ -31,7 +31,7 @@ class TalentedPerson: Person, Talent {
 }
 
 class TalentedPersonWithBadPersonality: TalentedPerson, BadPersonality {
-    var frequancyOfCursing: Level
+    let frequancyOfCursing: Level
     
     init(name: String, height: Int, singing: Level, dancing: Level, acting: Level, frequancyOfCursing: Level) {
         self.frequancyOfCursing = frequancyOfCursing
