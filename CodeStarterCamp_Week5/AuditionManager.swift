@@ -8,7 +8,7 @@
 import Foundation
 
 struct AuditionManager {
-    var totalApplicantsList: [Person]
+    let totalApplicantsList: [Person]
     var passedApplicantsList = [Person]()
     
     mutating func cast() {
