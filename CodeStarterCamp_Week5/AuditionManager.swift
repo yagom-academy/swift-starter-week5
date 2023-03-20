@@ -21,10 +21,7 @@ class AuditionManager {
                     (talentApplicant as? BadPersonality) == nil  else {
                 continue
             }
-            if talentApplicant.singing == .A ||
-                talentApplicant.dancing == .A ||
-                talentApplicant.acting == .A ||
-                talentApplicant.visual == .A {
+            if talentApplicant.isLevelA(){
                 passedApplicantsList.append(applicant)
             }
         }
