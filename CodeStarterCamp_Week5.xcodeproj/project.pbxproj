@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		34811DFB274B940F00A1E994 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34811DFA274B940F00A1E994 /* main.swift */; };
+		92E2988229C7F1BD00A95176 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E2988129C7F1BD00A95176 /* Person.swift */; };
+		92E2988429C7F1CE00A95176 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E2988329C7F1CE00A95176 /* Level.swift */; };
+		92E2988629C7F1DB00A95176 /* Talent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E2988529C7F1DB00A95176 /* Talent.swift */; };
+		92E2988829C7F1F200A95176 /* BadPersonality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E2988729C7F1F200A95176 /* BadPersonality.swift */; };
+		92E2988A29C7F5AC00A95176 /* TalentedPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E2988929C7F5AC00A95176 /* TalentedPerson.swift */; };
+		92E2988C29C7F5C300A95176 /* TalentedPersonWithBadPersonality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E2988B29C7F5C300A95176 /* TalentedPersonWithBadPersonality.swift */; };
+		92E2988E29C7F5D800A95176 /* AuditionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E2988D29C7F5D800A95176 /* AuditionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +32,13 @@
 /* Begin PBXFileReference section */
 		34811DF7274B940F00A1E994 /* CodeStarterCamp_Week5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CodeStarterCamp_Week5; sourceTree = BUILT_PRODUCTS_DIR; };
 		34811DFA274B940F00A1E994 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		92E2988129C7F1BD00A95176 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		92E2988329C7F1CE00A95176 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		92E2988529C7F1DB00A95176 /* Talent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talent.swift; sourceTree = "<group>"; };
+		92E2988729C7F1F200A95176 /* BadPersonality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadPersonality.swift; sourceTree = "<group>"; };
+		92E2988929C7F5AC00A95176 /* TalentedPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentedPerson.swift; sourceTree = "<group>"; };
+		92E2988B29C7F5C300A95176 /* TalentedPersonWithBadPersonality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentedPersonWithBadPersonality.swift; sourceTree = "<group>"; };
+		92E2988D29C7F5D800A95176 /* AuditionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,13 @@
 			isa = PBXGroup;
 			children = (
 				34811DFA274B940F00A1E994 /* main.swift */,
+				92E2988129C7F1BD00A95176 /* Person.swift */,
+				92E2988329C7F1CE00A95176 /* Level.swift */,
+				92E2988529C7F1DB00A95176 /* Talent.swift */,
+				92E2988729C7F1F200A95176 /* BadPersonality.swift */,
+				92E2988929C7F5AC00A95176 /* TalentedPerson.swift */,
+				92E2988B29C7F5C300A95176 /* TalentedPersonWithBadPersonality.swift */,
+				92E2988D29C7F5D800A95176 /* AuditionManager.swift */,
 			);
 			path = CodeStarterCamp_Week5;
 			sourceTree = "<group>";
@@ -119,7 +140,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92E2988E29C7F5D800A95176 /* AuditionManager.swift in Sources */,
+				92E2988429C7F1CE00A95176 /* Level.swift in Sources */,
+				92E2988A29C7F5AC00A95176 /* TalentedPerson.swift in Sources */,
+				92E2988C29C7F5C300A95176 /* TalentedPersonWithBadPersonality.swift in Sources */,
+				92E2988229C7F1BD00A95176 /* Person.swift in Sources */,
 				34811DFB274B940F00A1E994 /* main.swift in Sources */,
+				92E2988829C7F1F200A95176 /* BadPersonality.swift in Sources */,
+				92E2988629C7F1DB00A95176 /* Talent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
