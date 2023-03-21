@@ -18,7 +18,7 @@ struct AuditionManager {
             if person is TalentedPersonWithBadPersonality { continue }
             
             if let applicant = person as? TalentedPerson {
-                if applicant.checkLevel() {
+                if applicant.isPassLevel() {
                     passedApplicantsList.append(person)
                 }
             }

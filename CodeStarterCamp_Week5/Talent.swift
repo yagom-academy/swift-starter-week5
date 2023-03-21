@@ -14,7 +14,7 @@ protocol Talent {
 }
 
 extension Talent {
-    func checkLevel() -> Bool {
+    func isPassLevel() -> Bool {
         if self.singing == .A || self.dancing == .A || self.acting == .A {
             return true
         }
