@@ -26,6 +26,11 @@ struct AuditionManager {
     }
     
     func announcePassedApplicants() {
+        guard passedApplicantsList.count > 0 else {
+            print("합격자가 없습니다.")
+            return
+        }
+        
         print("---합격자 명단---")
         for passer in passedApplicantsList {
             print(passer.name)
