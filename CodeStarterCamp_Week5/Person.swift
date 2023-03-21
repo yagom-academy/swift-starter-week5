@@ -16,3 +16,31 @@ class Person {
         self.height = height
     }
 }
+
+class TalentedPerson: Person, Talent {
+    var singing: Level?
+    var dancing: Level?
+    var acting: Level?
+    
+    init(name: String, height: Int, singing: Level?, dancing: Level?, acting: Level?) {
+        super.init(name: name, height: height)
+        self.singing = singing
+        self.dancing = dancing
+        self.acting = acting
+    }
+}
+
+class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
+    var singing: Level?
+    var dancing: Level?
+    var acting: Level?
+    var frequancyOfCursing: Level?
+    
+    init(name: String, height: Int, singing: Level?, dancing: Level?, acting: Level?, frequancyOfCursing: Level?) {
+        super.init(name: name, height: height)
+        self.singing = singing
+        self.dancing = dancing
+        self.acting = acting
+        self.frequancyOfCursing = frequancyOfCursing
+    }
+}
