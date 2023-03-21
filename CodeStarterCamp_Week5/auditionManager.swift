@@ -7,10 +7,18 @@
 
 import Foundation
 
-extension TalentedPerson {
+extension Talent {
     var hasOutstandingTalent: Bool {
         get {
             self.singing == Level.A || self.dancing == Level.A || self.acting == Level.A
+        }
+    }
+}
+
+extension BadPersonality {
+    var isBadPerson: Bool {
+        get {
+            self.frequancyOfCursing == Level.A
         }
     }
 }
@@ -24,9 +32,9 @@ struct AuditionManager {
 
         for applicant in totalApplicantsList {
             if let person = applicant as? BadPersonality {
-                guard person.frequancyOfCursing != Level.A else { continue }
+                guard !person.isBadPerson else { continue }
             }
-            if let person = applicant as? TalentedPerson {
+            if let person = applicant as? Talent {
                 guard person.hasOutstandingTalent else { continue }
                 passedApplicantsList.append(applicant)
             }
