@@ -29,14 +29,14 @@ extension AuditionManager {
                 $0.acting == Level.A
             }
         
-        announcePassedApplicants(of: passedApplicantsList)
+        announcePassedApplicants()
     }
     
-    private func announcePassedApplicants(of list: [Person]) {
+    private func announcePassedApplicants() {
         print("---합격자 명단---")
         
-        for passedApplicant in list {
-            print("\(passedApplicant.name)")
+        for person in passedApplicantsList {
+            print("\(person.name)")
         }
         
         print("""
