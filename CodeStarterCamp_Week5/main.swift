@@ -85,23 +85,23 @@ struct AuditionManager {
                 guard checkPersonailty(checkApplicants) else {
                     passedApplicantsList.append(applicants)
                     continue
+                }
             }
         }
     }
-}
-
-func anouncePassedApplicants() {
-    print("---합격자 명단---")
-    for passer in passedApplicantsList {
-        print(passer.name)
-    }
-    print("--------------")
-    print("축하합니다!!")
     
-}
+    
+    func anouncePassedApplicants() {
+        print("---합격자 명단---")
+        for passer in passedApplicantsList {
+            print(passer.name)
+        }
+        print("--------------")
+        print("축하합니다!!")
+        
+    }
 }
 
-// 예시
 let yagom = TalentedPerson(name: "yagom", height: 100, singing: .B, dancing: .A, acting: .C)
 let noroo = Person(name: "noroo", height: 1000)
 let summer = TalentedPerson(name: "summer", height: 900, singing: .B, dancing: .B, acting: .B)
