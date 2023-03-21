@@ -16,19 +16,16 @@ struct AuditionManager {
     }
     
     mutating func cast() {
-        for person in totalApplicantsList {
-            
+        passedApplicantsList = totalApplicantsList.filter {
             var hasTalent = false
             
-            if person is TalentedPerson {
-                hasTalent = (person as! TalentedPerson).hasTalent()
-            } else if person is TalentedPersonWithBadPersonality {
-                hasTalent = (person as! TalentedPersonWithBadPersonality).hasTalent()
+            if $0 is TalentedPerson {
+                hasTalent = ($0 as! TalentedPerson).hasTalent()
+            } else if $0 is TalentedPersonWithBadPersonality {
+                hasTalent = ($0 as! TalentedPersonWithBadPersonality).hasTalent()
             }
-     
-            if hasTalent {
-                passedApplicantsList.append(person)
-            }
+            
+            return hasTalent
         }
     }
     
