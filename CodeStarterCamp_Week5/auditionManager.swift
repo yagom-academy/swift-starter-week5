@@ -7,6 +7,14 @@
 
 import Foundation
 
+extension TalentedPerson {
+    var hasOutstandingTalent: Bool {
+        get {
+            self.singing == Level.A || self.dancing == Level.A || self.acting == Level.A
+        }
+    }
+}
+
 struct AuditionManager {
     let totalApplicantsList: [Person]
     var passedApplicantsList: [Person] = []
@@ -19,7 +27,7 @@ struct AuditionManager {
                 guard person.frequancyOfCursing != Level.A else { continue }
             }
             if let person = applicant as? TalentedPerson {
-                guard hasOutstandingTalent(person: person) else { continue }
+                guard person.hasOutstandingTalent else { continue }
                 passedApplicantsList.append(applicant)
             }
         }
@@ -30,9 +38,5 @@ struct AuditionManager {
         print("---합격자 명단---")
         print(passedApplicantsList.map{ $0.name }.joined(separator: "\n"))
         print("--------------\n축하합니다!!")
-    }
-    
-    private func hasOutstandingTalent(person: TalentedPerson) -> Bool {
-        return person.singing == Level.A || person.dancing == Level.A || person.acting == Level.A
     }
 }
