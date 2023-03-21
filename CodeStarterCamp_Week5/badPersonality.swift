@@ -10,3 +10,9 @@ import Foundation
 protocol BadPersonality {
     var frequancyOfCursing: Level { get set }
 }
+
+extension BadPersonality {
+    func checkedBadPersonalityl() -> Bool {
+        return frequancyOfCursing == .A
+    }
+}

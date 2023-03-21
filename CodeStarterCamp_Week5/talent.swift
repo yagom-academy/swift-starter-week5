@@ -11,12 +11,4 @@ protocol Talent {
     var singing: Level { get set }
     var dancing: Level { get set }
     var acting: Level { get set }
-    
-    func checkedSuccessful() -> Bool
 }
-
-extension Talent {
-     func checkedSuccessful() -> Bool {
-         return singing == .A || dancing == .A || acting == .A
-     }
- }

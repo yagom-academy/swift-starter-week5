@@ -16,20 +16,24 @@ struct AuditionManager {
         
         for applicant in self.totalApplicantsList {
             guard let talentedPerson = applicant as? Talent else { continue }
-            if talentedPerson.checkedSuccessful() {
-                guard talentedPerson is BadPersonality else { 
-                    successfulCandidate.append(applicant)
-                    continue
-                }
+            if let talentedPersonWithBadPersonality = talentedPerson as? BadPersonality,
+               talentedPersonWithBadPersonality.checkedBadPersonalityl() {
+                successfulCandidate.append(applicant)
+            } else if checkedSuccessful(talentPerson: talentedPerson) {
+                successfulCandidate.append(applicant)
             }
         }
         self.passedApplicantsList = successfulCandidate
     }
     
+    func checkedSuccessful(talentPerson: Talent) -> Bool {
+        return talentPerson.singing == .A || talentPerson.dancing == .A || talentPerson.acting == .A
+    }
+    
     func announcePassedApplicants() {
         print("---합격자 명단---")
-        for person in passedApplicantsList {
-            print("\(person.name)")
+        for applicant in passedApplicantsList {
+            print("\(applicant.name)")
         }
         print("""
                 --------------
