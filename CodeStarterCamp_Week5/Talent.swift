@@ -13,6 +13,15 @@ protocol Talent {
     var acting: Level { get set }
 }
 
+extension Talent {
+    func checkLevel() -> Bool {
+        if self.singing == .A || self.dancing == .A || self.acting == .A {
+            return true
+        }
+        return false
+    }
+}
+
 protocol BadPersonality {
     var frequancyOfCursing: Level { get set }
 }

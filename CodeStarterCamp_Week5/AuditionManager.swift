@@ -17,9 +17,10 @@ struct AuditionManager {
         for person in totalApplicantsList {
             if person is TalentedPersonWithBadPersonality { continue }
             
-            let applicant = person as? TalentedPerson
-            if applicant?.singing == .A || applicant?.dancing == .A || applicant?.acting == .A {
-                passedApplicantsList.append(person)
+            if let applicant = person as? TalentedPerson {
+                if applicant.checkLevel() {
+                    passedApplicantsList.append(person)
+                }
             }
         }
     }
