@@ -15,7 +15,7 @@ protocol Talent {
 }
 
 extension Talent {
-    func isLevelA() -> Bool {
+    var isLevelA: Bool {
         return singing == .A || dancing == .A || acting == .A || visual == .A
     }
 }
