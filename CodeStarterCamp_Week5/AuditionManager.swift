@@ -14,6 +14,11 @@ struct AuditionManager {
 
 extension AuditionManager {
     mutating func cast() {
+        guard totalApplicantsList.count > 0 else {
+            print("지원자가 없습니다.")
+            return
+        }
+        
         passedApplicantsList = totalApplicantsList
             .filter { $0 is Talent }
             .filter { !($0 is BadPersonality) }
