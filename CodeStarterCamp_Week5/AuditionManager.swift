@@ -30,6 +30,6 @@ struct AuditionManager {
             print(passer.name)
         }
         print("--------------")
-        print("축하합니다!!")
+        print("축하합니다!!\n")
     }
 }
