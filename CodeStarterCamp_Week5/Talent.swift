@@ -21,7 +21,3 @@ extension Talent {
         return false
     }
 }
-
-protocol BadPersonality {
-    var frequancyOfCursing: Level { get set }
-}

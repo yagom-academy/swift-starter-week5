@@ -13,6 +13,8 @@
 		B6457AAA29C936DD004D9857 /* TalentedPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6457AA929C936DD004D9857 /* TalentedPerson.swift */; };
 		B6457AAC29C93716004D9857 /* TalentedPersonWithBadPersonality.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6457AAB29C93716004D9857 /* TalentedPersonWithBadPersonality.swift */; };
 		B6457AAE29C93733004D9857 /* AuditionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6457AAD29C93733004D9857 /* AuditionManager.swift */; };
+		B6457AB229CA7CC3004D9857 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6457AB129CA7CC3004D9857 /* Level.swift */; };
+		B6457AB429CA7CE4004D9857 /* BadPersonality.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6457AB329CA7CE4004D9857 /* BadPersonality.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +37,8 @@
 		B6457AA929C936DD004D9857 /* TalentedPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentedPerson.swift; sourceTree = "<group>"; };
 		B6457AAB29C93716004D9857 /* TalentedPersonWithBadPersonality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentedPersonWithBadPersonality.swift; sourceTree = "<group>"; };
 		B6457AAD29C93733004D9857 /* AuditionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditionManager.swift; sourceTree = "<group>"; };
+		B6457AB129CA7CC3004D9857 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		B6457AB329CA7CE4004D9857 /* BadPersonality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadPersonality.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +72,9 @@
 			isa = PBXGroup;
 			children = (
 				B6457AA729C936C0004D9857 /* Person.swift */,
+				B6457AB129CA7CC3004D9857 /* Level.swift */,
 				B6457AA529C936AC004D9857 /* Talent.swift */,
+				B6457AB329CA7CE4004D9857 /* BadPersonality.swift */,
 				B6457AA929C936DD004D9857 /* TalentedPerson.swift */,
 				B6457AAB29C93716004D9857 /* TalentedPersonWithBadPersonality.swift */,
 				B6457AAD29C93733004D9857 /* AuditionManager.swift */,
@@ -134,7 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6457AB429CA7CE4004D9857 /* BadPersonality.swift in Sources */,
 				B6457AAE29C93733004D9857 /* AuditionManager.swift in Sources */,
+				B6457AB229CA7CC3004D9857 /* Level.swift in Sources */,
 				B6457AA829C936C0004D9857 /* Person.swift in Sources */,
 				B6457AAC29C93716004D9857 /* TalentedPersonWithBadPersonality.swift in Sources */,
 				34811DFB274B940F00A1E994 /* main.swift in Sources */,

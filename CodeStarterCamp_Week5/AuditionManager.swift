@@ -8,12 +8,11 @@
 import Foundation
 
 struct AuditionManager {
-    let totalApplicantsList: [Person]
+    var totalApplicantsList: [Person]
     var passedApplicantsList: [Person] = []
     
     mutating func cast() {
-        guard totalApplicantsList.count > 0 else { return }
-        
+        passedApplicantsList = []
         for person in totalApplicantsList {
             if person is TalentedPersonWithBadPersonality { continue }
             

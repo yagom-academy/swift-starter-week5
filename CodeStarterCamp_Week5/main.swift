@@ -8,10 +8,6 @@
 
 import Foundation
 
-enum Level {
-    case A, B, C
-}
-
 let yagom = TalentedPerson(name: "yagom", height: 100, singing: .B, dancing: .A, acting: .C)
 let noroo = Person(name: "noroo", height: 1000)
 let summer = TalentedPerson(name: "summer", height: 900, singing: .B, dancing: .B, acting: .B)
