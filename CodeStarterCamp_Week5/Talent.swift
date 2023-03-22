@@ -8,7 +8,7 @@
 import Foundation
 
 protocol Talent {
-    var singing: Level? { get set }
-    var dancing: Level? { get set }
-    var acting: Level? { get set }
+    var singing: Level { get }
+    var dancing: Level { get }
+    var acting: Level { get }
 }

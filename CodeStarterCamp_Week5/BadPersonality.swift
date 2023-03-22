@@ -8,5 +8,5 @@
 import Foundation
 
 protocol BadPersonality {
-    var frequancyOfCursing: Level? { get set }
+    var frequancyOfCursing: Level { get }
 }
