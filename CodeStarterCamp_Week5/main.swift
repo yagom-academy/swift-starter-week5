@@ -19,9 +19,9 @@ let choo = TalentedPerson(name: "choo", height: 180, singing: .C, dancing: .C, a
 var charles: AuditionManager = AuditionManager(totalApplicantsList: [noroo, summer, coda, odong, yagom])
 var gundy: AuditionManager = AuditionManager(totalApplicantsList: [noroo, odong, ryu, choo])
 
-//charles.cast()
-//charles.announcedPassedApplicants()
+charles.cast()
+charles.announcedPassedApplicants()
 
-gundy.cast()
-gundy.announcedPassedApplicants()
+//gundy.cast()
+//gundy.announcedPassedApplicants()
 

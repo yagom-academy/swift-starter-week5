@@ -14,30 +14,35 @@ struct AuditionManager {
 
     mutating func cast() {
         for applicant in totalApplicantsList {
+            guard let havingTalentApplicant = applicant as? Talent,
+                  havingTalentApplicant.isApplicantHavingA(),
+                  havingTalentApplicant is BadPersonality == false else { continue }
+            
+            self.passedApplicantsList.append(applicant)
 
-            guard applicant is Talent,
-                  applicant is BadPersonality == false else { continue }
-
-            checkApplicantLevel(applicant)
+//            guard applicant is Talent,
+//                  applicant is BadPersonality == false else { continue }
+//
+//            checkApplicantLevel(applicant)
         }
     }
     
     
-    private mutating func checkApplicantLevel(_ applicant: Person)  {
-        guard let havingTalentApplicant = applicant as? Talent else { return }
-
-        guard havingTalentApplicant.acting == .A ||
-              havingTalentApplicant.dancing == .A ||
-              havingTalentApplicant.singing == .A else { return }
-
-        registPassedApplicant(applicant)
-    }
-
-
-    private mutating func registPassedApplicant(_ applicant: Person) {
-        self.passedApplicantsList.append(applicant)
-    }
-    
+//    private mutating func checkApplicantLevel(_ applicant: Person)  {
+//        guard let havingTalentApplicant = applicant as? Talent else { return }
+//
+//        guard havingTalentApplicant.acting == .A ||
+//              havingTalentApplicant.dancing == .A ||
+//              havingTalentApplicant.singing == .A else { return }
+//
+//        registPassedApplicant(applicant)
+//    }
+//
+//
+//    private mutating func registPassedApplicant(_ applicant: Person) {
+//        self.passedApplicantsList.append(applicant)
+//    }
+//
 
     func announcedPassedApplicants() {
         if passedApplicantsList.isEmpty == false {
