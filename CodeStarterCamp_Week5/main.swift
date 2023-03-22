@@ -21,4 +21,6 @@ var Wonbi = AuditionManager(totalApplicantsList: [yagom, noroo, summer, coda, od
 Wonbi.cast()
 Wonbi.announcePassedApplicants()
 
+//hacker.hackPassedApplicantsList()
+
 
