@@ -13,8 +13,13 @@ struct AuditionManager {
     
     mutating func cast() {
         for applicant in totalApplicantsList {
-            if let _ = applicant as? TalentedPersonWithBadPersonality { continue }
-            guard let talentedApplicant = applicant as? TalentedPerson, talentedApplicant.hasLevelA() else { continue }
+            if let _ = applicant as? TalentedPersonWithBadPersonality {
+                continue
+            }
+            guard let talentedApplicant = applicant as? TalentedPerson,
+                  talentedApplicant.hasLevelA() else {
+                continue
+            }
             self.passedApplicantsList.append(applicant)
         }
     }
