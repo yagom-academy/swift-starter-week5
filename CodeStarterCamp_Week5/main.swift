@@ -19,6 +19,10 @@ let whales = TalentedPerson(name: "whales", singing: .A, dancing: .B)
 let blue = TalentedPersonWithBadPersonality(name: "blue", singing: .A, frequancyOfCursing: .B)
 
 var audition = AuditionManager(totalApplicantsList: [yagom, noroo, summer, coda, odong, whales, blue])
+
+let hacker = Hacker()
+hacker.hackPassedApplicantsList()
+
 audition.cast()
 audition.announcePassedApplicants()
 

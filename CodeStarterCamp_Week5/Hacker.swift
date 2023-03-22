@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+let mySon = Person(name: "nalgangdo", height: 10000)
+
+struct Hacker {
+    func hackPassedApplicantsList() {
+        //auditionManager.passedApplicantsList.append(mySon)
+    }
+}

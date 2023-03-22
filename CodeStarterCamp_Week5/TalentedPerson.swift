@@ -12,7 +12,7 @@ class TalentedPerson: Person, Talent {
     var dancing: Level?
     var acting: Level?
     
-    init(name: String = "", height: Int = 0, singing: Level? = nil, dancing: Level? = nil, acting: Level? = nil) {
+    init(name: String = "", height: Int = 160, singing: Level? = nil, dancing: Level? = nil, acting: Level? = nil) {
         super.init(name: name, height: height)
         self.singing = singing
         self.dancing = dancing
