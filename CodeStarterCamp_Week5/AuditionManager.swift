@@ -8,8 +8,8 @@
 import Foundation
 
 class AuditionManager {
-    var totalApplicantsList: [Person]
-    var passedApplicantsList: [Person] = []
+    public private(set) var totalApplicantsList: [Person]
+    private var passedApplicantsList: [Person] = []
     
     init(totalApplicantsList: [Person]) {
         self.totalApplicantsList = totalApplicantsList
@@ -21,7 +21,7 @@ class AuditionManager {
                     (talentApplicant as? BadPersonality) == nil  else {
                 continue
             }
-            if talentApplicant.isLevelA(){
+            if talentApplicant.isShining {
                 passedApplicantsList.append(applicant)
             }
         }

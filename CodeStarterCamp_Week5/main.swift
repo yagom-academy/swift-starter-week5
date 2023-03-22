@@ -19,4 +19,3 @@ let yagom = AuditionManager(totalApplicantsList: [mint, sara, ohNew, noma, SH])
 
 yagom.cast()
 yagom.announcePassedApplicants()
-
