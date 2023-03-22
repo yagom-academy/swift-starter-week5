@@ -22,7 +22,7 @@ extension AuditionManager {
         passedApplicantsList = totalApplicantsList
             .filter { $0 is Talent }
             .filter { !($0 is BadPersonality) }
-            .map { $0 as! TalentedPerson }
+            .compactMap { $0 as? TalentedPerson }
             .filter {
                 $0.singing == Level.A ||
                 $0.dancing == Level.A ||
