@@ -8,5 +8,20 @@
 
 import Foundation
 
-print("Hello, World!")
+let yagom = TalentedPerson(name: "yagom", height: 100, singing: .B, dancing: .B, acting: .C)
+let noroo = Person(name: "noroo", height: 1000)
+let summer = TalentedPerson(name: "summer", height: 900, singing: .A, dancing: .B, acting: .B)
+let coda = TalentedPerson(name: "coda", height: 200, singing: .A, dancing: .C, acting: .C)
+let odong = TalentedPersonWithBadPersonality(name: "odong", height: 400, singing: .A, dancing: .A, acting: .A, frequancyOfCursing: .A)
+let ryu = TalentedPerson(name: "ryu", height: 190, singing: .B, dancing: .C, acting: .B)
+let choo = TalentedPerson(name: "choo", height: 180, singing: .C, dancing: .C, acting: .C)
+
+var charles: AuditionManager = AuditionManager(totalApplicantsList: [noroo, summer, coda, odong, yagom])
+var gundy: AuditionManager = AuditionManager(totalApplicantsList: [noroo, odong, ryu, choo])
+
+//charles.cast()
+//charles.announcedPassedApplicants()
+
+gundy.cast()
+gundy.announcedPassedApplicants()
 
