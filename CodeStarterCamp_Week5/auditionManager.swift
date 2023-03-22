@@ -7,23 +7,25 @@
 
 import Foundation
 
-struct AuditionManager {
-    let totalApplicantsList: [Person]
-    var passedApplicantsList: [Person] = []
+class AuditionManager {
+    private(set) var totalApplicantsList: [Person] = []
+    private var passedApplicantsList: [Person] = []
     
-    mutating func cast() {
+    func updateApplicantsList(_ applicant: Person) {
+        totalApplicantsList.append(applicant)
+    }
+    
+    func cast() {
         guard !totalApplicantsList.isEmpty else {
             print("지원자가 없습니다.")
             return
         }
 
         for applicant in totalApplicantsList {
-            if let person = applicant as? BadPersonality, isBadPerson(person) { continue }
+            guard hasGoodPersonality(applicant),
+                  hasOutstandingTalent(applicant) else { continue }
 
-            if let person = applicant as? Talent {
-                guard hasOutstandingTalent(person) else { continue }
-                passedApplicantsList.append(applicant)
-            }
+            passedApplicantsList.append(applicant)
         }
     }
                 
@@ -38,11 +40,15 @@ struct AuditionManager {
         print("--------------\n축하합니다!!")
     }
     
-    private func isBadPerson(_ person: BadPersonality) -> Bool {
-        return person.frequancyOfCursing == Level.A
+    private func hasGoodPersonality(_ person: Person) -> Bool {
+        guard let person = person as? BadPersonality else { return true }
+
+        return person.frequancyOfCursing != Level.A
     }
     
-    private func hasOutstandingTalent(_ person: Talent) -> Bool {
+    private func hasOutstandingTalent(_ person: Person) -> Bool {
+        guard let person = person as? Talent else { return false }
+
         return person.singing == Level.A || person.dancing == Level.A || person.acting == Level.A
     }
 }
