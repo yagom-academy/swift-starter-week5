@@ -13,19 +13,11 @@ class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
     var acting: Level?
     var frequancyOfCursing: Level?
     
-    init(name: String = "", height: Int = 0, singing: Level? = nil, dancing: Level? = nil, acting: Level? = nil, frequancyOfCursing: Level? = nil) {
+    init(name: String = "", height: Int = 0, singing: Level? = nil, dancing: Level? = nil, acting: Level? = nil, frequancyOfCursing: Level? = .C) {
         super.init(name: name, height: height)
         self.singing = singing
         self.dancing = dancing
         self.acting = acting
         self.frequancyOfCursing = frequancyOfCursing
-    }
-    
-    func hasTalent() -> Bool {
-        if singing == .A || dancing == .A || acting == .A {
-            return true
-        } else {
-            return false
-        }
     }
 }

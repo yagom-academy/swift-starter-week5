@@ -11,6 +11,14 @@ protocol Talent {
     var singing: Level? { get set }
     var dancing: Level? { get set }
     var acting: Level? { get set }
-    
-    func hasTalent() -> Bool
+}
+
+extension Talent {
+    var hasTalent: Bool {
+        if singing == .A || dancing == .A || acting == .A {
+            return true
+        } else {
+            return false
+        }
+    }
 }

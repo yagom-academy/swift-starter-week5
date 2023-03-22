@@ -18,12 +18,4 @@ class TalentedPerson: Person, Talent {
         self.dancing = dancing
         self.acting = acting
     }
-    
-    func hasTalent() -> Bool {
-        if singing == .A || dancing == .A || acting == .A {
-            return true
-        } else {
-            return false
-        }
-    }
 }

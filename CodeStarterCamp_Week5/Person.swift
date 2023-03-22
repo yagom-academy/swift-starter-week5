@@ -8,10 +8,10 @@
 import Foundation
 
 class Person {
-    var name: String
-    var height: Int
+    let name: String
+    let height: Int
     
-    init(name: String = "", height: Int = 0) {
+    init(name: String = "", height: Int = 160) {
         self.name = name
         self.height = height
     }
