@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		34811DFB274B940F00A1E994 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34811DFA274B940F00A1E994 /* main.swift */; };
 		4480F1FF29C82C430004C5A8 /* practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480F1FE29C82C430004C5A8 /* practice.swift */; };
-		4480F20129C864C10004C5A8 /* trainees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480F20029C864C10004C5A8 /* trainees.swift */; };
+		4480F20129C864C10004C5A8 /* entertainment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480F20029C864C10004C5A8 /* entertainment.swift */; };
 		4480F20329C864DC0004C5A8 /* person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480F20229C864DC0004C5A8 /* person.swift */; };
 		4480F20529C8656E0004C5A8 /* level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480F20429C8656E0004C5A8 /* level.swift */; };
 		4480F20729C867980004C5A8 /* auditionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4480F20629C867980004C5A8 /* auditionManager.swift */; };
@@ -31,7 +31,7 @@
 		34811DF7274B940F00A1E994 /* CodeStarterCamp_Week5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CodeStarterCamp_Week5; sourceTree = BUILT_PRODUCTS_DIR; };
 		34811DFA274B940F00A1E994 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		4480F1FE29C82C430004C5A8 /* practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = practice.swift; sourceTree = "<group>"; };
-		4480F20029C864C10004C5A8 /* trainees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trainees.swift; sourceTree = "<group>"; };
+		4480F20029C864C10004C5A8 /* entertainment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = entertainment.swift; sourceTree = "<group>"; };
 		4480F20229C864DC0004C5A8 /* person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = person.swift; sourceTree = "<group>"; };
 		4480F20429C8656E0004C5A8 /* level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = level.swift; sourceTree = "<group>"; };
 		4480F20629C867980004C5A8 /* auditionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = auditionManager.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 			children = (
 				34811DFA274B940F00A1E994 /* main.swift */,
 				4480F1FE29C82C430004C5A8 /* practice.swift */,
-				4480F20029C864C10004C5A8 /* trainees.swift */,
+				4480F20029C864C10004C5A8 /* entertainment.swift */,
 				4480F20229C864DC0004C5A8 /* person.swift */,
 				4480F20429C8656E0004C5A8 /* level.swift */,
 				4480F20629C867980004C5A8 /* auditionManager.swift */,
@@ -139,7 +139,7 @@
 				34811DFB274B940F00A1E994 /* main.swift in Sources */,
 				4480F20329C864DC0004C5A8 /* person.swift in Sources */,
 				4480F20529C8656E0004C5A8 /* level.swift in Sources */,
-				4480F20129C864C10004C5A8 /* trainees.swift in Sources */,
+				4480F20129C864C10004C5A8 /* entertainment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
