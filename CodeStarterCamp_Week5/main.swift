@@ -17,4 +17,16 @@ let odong = TalentedPersonWithBadPersonality(name: "odong", height: 400, singing
 let people: [Person] = [yagom, noroo, summer, coda, odong]
 
 var manager = AuditionManager(totalApplicantsList: people)
+
+let mySon = Person(name: "nalgangdo", height: 10000)
+
+struct Hacker {
+    func hackPassedApplicantsList() {
+//        manager.passedApplicantsList.append(mySon)
+    }
+}
+
+let hacker = Hacker()
+hacker.hackPassedApplicantsList()
+
 manager.cast()
