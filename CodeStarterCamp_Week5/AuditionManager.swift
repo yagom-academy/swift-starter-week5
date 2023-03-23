@@ -21,17 +21,10 @@ struct AuditionManager {
                 }
             }
         }
-    
-        if passedApplicantsList.isEmpty == true {
-            print("불합격 입니다.")
-        }
-        
-        for passedPerson in passedApplicantsList {
-            print("\(passedPerson.name)님 합격을 축하드립니다.")
-        }
     }
     
-    func examinationOfSuccessfulApplicants() {
+    mutating func examinationOfSuccessfulApplicants() {
+        cast()
         if passedApplicantsList.isEmpty == true {
             print("불합격 입니다.")
         }
