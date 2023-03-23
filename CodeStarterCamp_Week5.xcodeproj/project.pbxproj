@@ -15,6 +15,7 @@
 		DC2667E129CB45500085CFA4 /* AuditionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2667E029CB45500085CFA4 /* AuditionManager.swift */; };
 		DC2667E329CB455D0085CFA4 /* TalentedPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2667E229CB455D0085CFA4 /* TalentedPerson.swift */; };
 		DC2667E529CB45770085CFA4 /* TalentedPersonWithBadPersonality.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2667E429CB45770085CFA4 /* TalentedPersonWithBadPersonality.swift */; };
+		DC2667E729CC2CAB0085CFA4 /* Hacker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2667E629CC2CAB0085CFA4 /* Hacker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		DC2667E029CB45500085CFA4 /* AuditionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditionManager.swift; sourceTree = "<group>"; };
 		DC2667E229CB455D0085CFA4 /* TalentedPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentedPerson.swift; sourceTree = "<group>"; };
 		DC2667E429CB45770085CFA4 /* TalentedPersonWithBadPersonality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentedPersonWithBadPersonality.swift; sourceTree = "<group>"; };
+		DC2667E629CC2CAB0085CFA4 /* Hacker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hacker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				DC2667E029CB45500085CFA4 /* AuditionManager.swift */,
 				DC2667E229CB455D0085CFA4 /* TalentedPerson.swift */,
 				DC2667E429CB45770085CFA4 /* TalentedPersonWithBadPersonality.swift */,
+				DC2667E629CC2CAB0085CFA4 /* Hacker.swift */,
 			);
 			path = CodeStarterCamp_Week5;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				DC2667D929CB45220085CFA4 /* Person.swift in Sources */,
 				34811DFB274B940F00A1E994 /* main.swift in Sources */,
 				DC2667DF29CB45400085CFA4 /* BadPersonality.swift in Sources */,
+				DC2667E729CC2CAB0085CFA4 /* Hacker.swift in Sources */,
 				DC2667E329CB455D0085CFA4 /* TalentedPerson.swift in Sources */,
 				DC2667E529CB45770085CFA4 /* TalentedPersonWithBadPersonality.swift in Sources */,
 				DC2667DD29CB45340085CFA4 /* Talent.swift in Sources */,

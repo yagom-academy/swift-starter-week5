@@ -16,12 +16,17 @@ let odong = TalentedPersonWithBadPersonality(name: "odong", height: 400, singing
 let ryu = TalentedPerson(name: "ryu", height: 190, singing: .B, dancing: .C, acting: .B)
 let choo = TalentedPerson(name: "choo", height: 180, singing: .C, dancing: .C, acting: .C)
 
-var charles: AuditionManager = AuditionManager(totalApplicantsList: [noroo, summer, coda, odong, yagom])
-var gundy: AuditionManager = AuditionManager(totalApplicantsList: [noroo, odong, ryu, choo])
+var charles: AuditionManager = AuditionManager(totalApplciantsList: [noroo, summer, coda, odong, yagom])
+var gundy: AuditionManager = AuditionManager(totalApplciantsList: [noroo, odong, ryu, choo])
 
-charles.cast()
-charles.announcedPassedApplicants()
+let mySon = Person(name: "nalgangdo", height: 10000)
 
-//gundy.cast()
-//gundy.announcedPassedApplicants()
+let hacker = Hacker()
+hacker.hackPassedApplicantsList(to: gundy, fakePassedApplicant: mySon)
+
+//charles.cast()
+//charles.announcedPassedApplicants()
+
+gundy.cast()
+gundy.announcedPassedApplicants()
 
