@@ -11,9 +11,7 @@ import Foundation
 struct AuditionManager {
     var totalApplicantsList: [Person]
     var passedApplicantsList: [Person] = []
-    //    var dropoutList: [Person] = []
     
-    //    합격자를 골라내는 메서드
     mutating func cast() {
         for person in totalApplicantsList {
             if let applicants = person as? Talent {
@@ -29,7 +27,6 @@ struct AuditionManager {
         }
     }
     
-    //합격자 출력하는 메서드
     mutating func announcePassedApplicants() {
         print("--- 합격자 명단---")
         cast()
