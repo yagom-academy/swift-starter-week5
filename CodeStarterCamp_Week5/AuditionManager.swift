@@ -8,8 +8,12 @@
 import Foundation
 
 struct AuditionManager {
-    var totalApplicantsList: Array<Person>
-    var passedApplicantsList: Array<Person> = Array<Person>()
+    public private(set) var totalApplicantsList: Array<Person>
+    private var passedApplicantsList: Array<Person> = Array<Person>()
+    
+    init(_ totalApplicantsList: Array<Person>) {
+        self.totalApplicantsList = totalApplicantsList
+    }
     
     mutating func cast() {
         for applicant in totalApplicantsList {
