@@ -9,10 +9,14 @@ import Foundation
 
 
 struct AuditionManager {
-    var totalApplicantsList: [Person]
-    var passedApplicantsList: [Person] = []
+    private(set) var totalApplicantsList: [Person]
+    private var passedApplicantsList: [Person] = []
     
-    mutating func cast() {
+    init(totalApplicantsList: [Person]) {
+        self.totalApplicantsList = totalApplicantsList
+    }
+    
+    private mutating func cast() {
         for person in totalApplicantsList {
             if let applicants = person as? Talent {
                 if person is BadPersonality { continue }
@@ -23,7 +27,7 @@ struct AuditionManager {
         }
     }
     
-    mutating func examinationOfSuccessfulApplicants() {
+    private mutating func examinationOfSuccessfulApplicants() {
         cast()
         if passedApplicantsList.isEmpty == true {
             print("불합격 입니다.")
@@ -40,6 +44,6 @@ struct AuditionManager {
         print("---------------")
     }
     
-   
+    
     
 }

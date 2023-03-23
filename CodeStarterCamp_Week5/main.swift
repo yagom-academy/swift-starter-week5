@@ -18,10 +18,21 @@ let so = TalentedPerson(name: "so", height: 100, singing: .B, dancing: .B, actin
 let gom = TalentedPersonWithBadPersonality(name: "gom", height: 123, singing: .A, dancing: .A, acting: .A, frequancyOfCursing: .A)
 let cat = TalentedPersonWithBadPersonality(name: "cat", height: 123, singing: .A, dancing: .A, acting: .A, frequancyOfCursing: .A)
 
-
 var smEnter = AuditionManager(totalApplicantsList: [jerry, tom, hemg, gom, ya, ho, so, cat])
 var jypEnter = AuditionManager(totalApplicantsList: [jerry, gom, ya, ho, cat])
 smEnter.announcePassedApplicants()
 
 print("합격자 없을 경우")
 jypEnter.announcePassedApplicants()
+
+
+let mySon = Person(name: "nalgangdo", height: 10000)
+
+struct Hacker {
+    func hackPassedApplicantsList() {
+//        smEnter.passedApplicantsList.append(mySon)  //접근불가
+    }
+}
+
+let hacker = Hacker()
+hacker.hackPassedApplicantsList()
