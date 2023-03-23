@@ -20,7 +20,8 @@ struct AuditionManager {
         for person in totalApplicantsList {
             if person is TalentedPersonWithBadPersonality { continue }
             
-            if let applicant = person as? TalentedPerson, applicant.isPassLevel() {
+            if let applicant = person as? TalentedPerson,
+               applicant.isPassLevel() {
                 passedApplicantsList.append(person)
             }
         }
@@ -42,5 +43,6 @@ struct AuditionManager {
     
     mutating func changetotalList(to list: [Person]) {
         totalApplicantsList = list
+        passedApplicantsList = []
     }
 }
