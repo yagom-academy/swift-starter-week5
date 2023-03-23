@@ -8,18 +8,21 @@
 import Foundation
 
 struct AuditionManager {
-    var totalApplicantsList: [Person]
-    var passedApplicantsList: [Person] = []
+    private(set) var totalApplicantsList: [Person]
+    private var passedApplicantsList: [Person] = []
+    
+    init(totalApplicantsList: [Person]) {
+        self.totalApplicantsList = totalApplicantsList
+    }
     
     mutating func cast() {
         passedApplicantsList = []
         for person in totalApplicantsList {
             if person is TalentedPersonWithBadPersonality { continue }
             
-            if let applicant = person as? TalentedPerson {
-                if applicant.isPassLevel() {
-                    passedApplicantsList.append(person)
-                }
+            if let applicant = person as? TalentedPerson,
+               applicant.isPassLevel() {
+                passedApplicantsList.append(person)
             }
         }
     }
@@ -36,5 +39,10 @@ struct AuditionManager {
         }
         print("--------------")
         print("축하합니다!!\n")
+    }
+    
+    mutating func changetotalList(to list: [Person]) {
+        totalApplicantsList = list
+        passedApplicantsList = []
     }
 }
