@@ -26,7 +26,7 @@ print("합격자 없을 경우")
 jypEnter.announcePassedApplicants()
 
 
-private let mySon = Person(name: "nalgangdo", height: 10000)
+let mySon = Person(name: "nalgangdo", height: 10000)
 
 struct Hacker {
     func hackPassedApplicantsList() {
