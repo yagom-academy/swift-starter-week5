@@ -7,19 +7,9 @@
 
 import Foundation
 
-protocol Talent {
-    var singing: Level { get set }
-    var dancing: Level { get set }
-    var acting: Level { get set }
-}
-
-protocol BadPersonality {
-    var frequancyOfCursing: Level { get set }
-}
-
 class Person {
-    var name: String
-    var height: Int
+    let name: String
+    let height: Int
  
     init(name: String, height: Int) {
         self.name = name

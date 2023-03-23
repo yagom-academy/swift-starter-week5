@@ -16,13 +16,12 @@ let ya = TalentedPerson(name: "ya", height: 100, singing: .B, dancing: .B, actin
 let ho = TalentedPerson(name: "ho", height: 100, singing: .B, dancing: .B, acting: .C)
 let so = TalentedPerson(name: "so", height: 100, singing: .B, dancing: .B, acting: .A)
 let gom = TalentedPersonWithBadPersonality(name: "gom", height: 123, singing: .A, dancing: .A, acting: .A, frequancyOfCursing: .A)
-let gom1 = TalentedPersonWithBadPersonality(name: "gom1", height: 123, singing: .A, dancing: .A, acting: .A, frequancyOfCursing: .A)
+let cat = TalentedPersonWithBadPersonality(name: "cat", height: 123, singing: .A, dancing: .A, acting: .A, frequancyOfCursing: .A)
 
 
-var groupA = AuditionManager(totalApplicantsList: [jerry, tom, hemg, gom, ya, ho, so, gom1])
-var groupB = AuditionManager(totalApplicantsList: [jerry, gom, ya, ho, gom1])
-groupA.announcePassedApplicants()
-
+var smEnter = AuditionManager(totalApplicantsList: [jerry, tom, hemg, gom, ya, ho, so, cat])
+var jypEnter = AuditionManager(totalApplicantsList: [jerry, gom, ya, ho, cat])
+smEnter.announcePassedApplicants()
 
 print("합격자 없을 경우")
-groupB.announcePassedApplicants()
+jypEnter.announcePassedApplicants()
