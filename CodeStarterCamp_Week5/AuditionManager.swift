@@ -7,12 +7,17 @@
 
 import Foundation
 
-struct AuditionManager {
-    var totalApplicantsList: [Person]
-    var passedApplicantsList: [Person] = []
+class AuditionManager {
+    internal var totalApplicantsList: [Person]
+    private var passedApplicantsList: [Person] = []
     
-
-    mutating func cast() {
+    
+    init(totalApplicantsList: [Person]) {
+        self.totalApplicantsList = totalApplicantsList
+    }
+    
+    
+    func cast() {
         for applicant in totalApplicantsList {
             guard let havingTalentApplicant = applicant as? Talent,
                   havingTalentApplicant.isApplicantHavingA(),
