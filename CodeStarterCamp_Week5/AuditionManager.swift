@@ -9,12 +9,11 @@ import Foundation
 
 class AuditionManager {
     internal var totalApplicantsList: [Person]
-    //private var passedApplicantsList: [Person] = []
-    var passedApplicantsList: [Person] = []
+    private var passedApplicantsList: [Person] = []
     
     
-    init(totalApplciantsList: [Person]) {
-        self.totalApplicantsList = totalApplciantsList
+    init(totalApplicantsList: [Person]) {
+        self.totalApplicantsList = totalApplicantsList
     }
     
     

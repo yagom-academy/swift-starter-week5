@@ -10,9 +10,6 @@ import Foundation
 
 struct Hacker {
     func hackPassedApplicantsList(to auditionManager: AuditionManager, fakePassedApplicants: [Person]) {
-        for fakePassedApplicant in fakePassedApplicants {
-            auditionManager.passedApplicantsList.append(fakePassedApplicant)
-        }
-//        auditionManager.passedApplicantsList.append(fakePassedApplicant)
+        auditionManager.passedApplicantsList.append(contentsOf: fakePassedApplicants)
     }
 }

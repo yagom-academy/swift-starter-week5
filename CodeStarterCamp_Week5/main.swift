@@ -16,8 +16,8 @@ let odong = TalentedPersonWithBadPersonality(name: "odong", height: 400, singing
 let ryu = TalentedPerson(name: "ryu", height: 190, singing: .B, dancing: .C, acting: .B)
 let choo = TalentedPerson(name: "choo", height: 180, singing: .C, dancing: .C, acting: .C)
 
-var charles: AuditionManager = AuditionManager(totalApplciantsList: [noroo, summer, coda, odong, yagom])
-var gundy: AuditionManager = AuditionManager(totalApplciantsList: [noroo, odong, ryu, choo])
+var charles: AuditionManager = AuditionManager(totalApplicantsList: [noroo, summer, coda, odong, yagom])
+var gundy: AuditionManager = AuditionManager(totalApplicantsList: [noroo, odong, ryu, choo])
 
 let mySon = Person(name: "nalgangdo", height: 10000)
 let roro = Person(name: "maeRong", height: 1000)
