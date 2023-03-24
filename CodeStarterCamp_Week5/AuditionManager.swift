@@ -8,8 +8,8 @@
 import Foundation
 
 struct AuditionManager {
-    private(set) var totalApplicantsList: [Person] = [yagom, noroo, summer, coda, odong, badman]
-    private var passedApplicantsList: [Person] = []
+    var totalApplicantsList: [Person] = [yagom, noroo, summer, coda, odong, badman]
+    var passedApplicantsList: [Person] = []
     
     mutating func cast() {
         let passedWaitingList: [Person] = totalApplicantsList.filter({
