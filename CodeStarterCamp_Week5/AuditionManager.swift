@@ -8,8 +8,8 @@
 import Foundation
 
 struct AuditionManager {
-    var totalApplicantsList: [Person] = [yagom, noroo, summer, coda, odong, badman]
-    var passedApplicantsList: [Person] = []
+    private(set) var totalApplicantsList: [Person] = [yagom, noroo, summer, coda, odong, badman]
+    private var passedApplicantsList: [Person] = []
     
     mutating func cast() {
         let passedWaitingList: [Person] = totalApplicantsList.filter({
@@ -22,8 +22,7 @@ struct AuditionManager {
         })
         
         passedApplicantsList = passedWaitingList.filter({
-            if let failedPass = $0 as? BadPersonality,
-                failedPass.frequancyOfCursing == .C {
+            if $0 is BadPersonality {
                 return false
             } else {
                 return true

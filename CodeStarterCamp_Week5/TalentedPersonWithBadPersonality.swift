@@ -20,6 +20,4 @@ class TalentedPersonWithBadPersonality: Person, Talent, BadPersonality {
         self.frequancyOfCursing = frequancyOfCursing
         super.init(name: name, height: height)
     }
-    
-
 }
