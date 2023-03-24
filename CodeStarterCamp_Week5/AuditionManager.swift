@@ -8,8 +8,8 @@
 import Foundation
 
 struct AuditionManager {
-    var totalApplicantsList: [Person]
-    var passedApplicantsList: [Person] = []
+    private (set) var totalApplicantsList: [Person] = [yagom, noroo, summer, coda, odong]
+    private var passedApplicantsList: [Person] = []
     
     mutating func cast(applicants: [Person]) {
         for applicant in applicants {
@@ -27,12 +27,13 @@ struct AuditionManager {
     mutating func passedListUp(_ applicant: Talent) {
         if let passedApplicant = applicant as? Person {
             passedApplicantsList.append(passedApplicant)
+            print(passedApplicantsList)
         }
     }
     
-    func announcePassedApplicants(passedList: [Person]) {
+    func announcePassedApplicants() {
         print("---합격자 명단---")
-        for passedApplicants in passedList {
+        for passedApplicants in passedApplicantsList {
             print(passedApplicants.name)
         }
         print("--------------\n축하합니다!!")
