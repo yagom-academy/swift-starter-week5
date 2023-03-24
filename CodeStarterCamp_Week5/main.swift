@@ -20,9 +20,10 @@ var charles: AuditionManager = AuditionManager(totalApplciantsList: [noroo, summ
 var gundy: AuditionManager = AuditionManager(totalApplciantsList: [noroo, odong, ryu, choo])
 
 let mySon = Person(name: "nalgangdo", height: 10000)
+let roro = Person(name: "maeRong", height: 1000)
 
 let hacker = Hacker()
-hacker.hackPassedApplicantsList(to: gundy, fakePassedApplicant: mySon)
+hacker.hackPassedApplicantsList(to: gundy, fakePassedApplicants: [mySon, roro])
 
 //charles.cast()
 //charles.announcedPassedApplicants()
