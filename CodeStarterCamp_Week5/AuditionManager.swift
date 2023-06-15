@@ -12,7 +12,6 @@ struct AuditionManager {
     private(set) var passedApplicantsList = [Person]()
     
     mutating func cast() {
-        var passer = [Talent]()
         totalApplicantList.forEach { applicant in
             if let applicant = applicant as? TalentedPerson {
                 if applicant.acting == .A || applicant.dancing == .A || applicant.singing == .A {
