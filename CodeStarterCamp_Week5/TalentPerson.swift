@@ -17,7 +17,7 @@ protocol BadPersonality {
     var frequancyOfCursing: Level { get set }
 }
 
-class TalentedPerson: Person, Talent {
+final class TalentedPerson: Person, Talent {
     var singing: Level
     var dancing: Level
     var acting: Level
