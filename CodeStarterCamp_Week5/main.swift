@@ -8,8 +8,6 @@
 
 import Foundation
 
-// 예시
-
 func printLine(length: Int = 10) {
     print(String(repeating: "-", count: length))
 }

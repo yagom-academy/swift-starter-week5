@@ -16,7 +16,9 @@ struct AuditionManager {
     }
     
     mutating func cast() {
-        let talentedApplicants = totalApplicantsList.filter{ $0 is TalentedPerson || $0 is TalentedPersonWithBadPersonality }
+        let talentedApplicants = totalApplicantsList.filter{ applicant in
+            return applicant is TalentedPerson || applicant is TalentedPersonWithBadPersonality
+        }
         
         self.passedApplicantsList = talentedApplicants.filter{ applicant in
             if applicant is TalentedPerson {
@@ -30,10 +32,10 @@ struct AuditionManager {
                 let person = applicant as! TalentedPersonWithBadPersonality
                 let singingLevel = person.singing
                 let dancingLevel = person.dancing
-                let actinvLevel = person.acting
+                let actingLevel = person.acting
                 let personality = person.frequancyOfCursing
                 
-                return (singingLevel == .A || dancingLevel == .A || actinvLevel == .A) && personality != .C
+                return (singingLevel == .A || dancingLevel == .A || actingLevel == .A) && personality != .C
             }
         }
     }
